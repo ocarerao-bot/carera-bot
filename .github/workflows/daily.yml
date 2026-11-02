@@ -1,0 +1,27 @@
+name: CarEra daily photos
+on:
+  schedule:
+    - cron: "17 6 * * *"     # every day 06:17 UTC (07:17 / 08:17 in Germany)
+  workflow_dispatch: {}      # "Run workflow" button for a manual test
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - run: python bot.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CONTACT: ${{ secrets.CONTACT }}
+      - name: Save progress (which car is next, which photos were used)
+        run: |
+          git config user.name "carera-bot"
+          git config user.email "carera-bot@users.noreply.github.com"
+          git add state.json
+          git commit -m "daily photos $(date -u +%F)" || echo "nothing to commit"
+          git push
