@@ -33,12 +33,22 @@ def search(query, n=40):
              iiprop="url|size|mime|extmetadata", iiurlwidth=1600), timeout=40)
     r.raise_for_status(); return list((r.json().get("query") or {}).get("pages", {}).values())
 
-def candidates(pages, used):
+def tok_re(t):
+    pre = t.endswith("*"); t = t.rstrip("*")
+    return re.compile(r"(?<![0-9a-z])" + re.escape(t) + ("" if pre else r"(?![0-9a-z])"), re.I)
+
+def title_ok(title, must, never):
+    name = title.replace("_", " ")
+    if any(tok_re(t).search(name) for t in never): return False
+    return all(any(tok_re(t).search(name) for t in grp) for grp in must)
+
+def candidates(pages, used, must=(), never=()):
     out = []
     for p in pages:
         title = p.get("title", ""); ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata", {})
         lic = md.get("LicenseShortName", {}).get("value", "")
         if title in used or not OK_LIC.search(lic) or BAD_LIC.search(lic): continue
+        if not title_ok(title, must, never): continue
         if ii.get("mime") not in ("image/jpeg", "image/png"): continue
         w, h = ii.get("width", 0), ii.get("height", 0)
         if w < 1600 or h < 900 or w < h: continue           # big, landscape
@@ -69,10 +79,16 @@ def run(state_path=os.path.join(HERE, "state.json")):
     today = datetime.date.today().isoformat()
     tg("sendMessage", chat_id=chat, parse_mode="HTML",
        text=f"🚗 <b>CarEra photo kit – {esc(car['car'])}</b>\n{today}\n" +
-            " · ".join(f"{y}" for y, _ in car["eras"]) + "\n\nOne car. Three eras. 👇")
+            " · ".join(e[0] for e in car["eras"]) + "\n\nOne car. Three eras. 👇")
     credits = []
-    for year, q in car["eras"]:
-        try: cs = candidates(search(q), used)
+    for era in car["eras"]:
+        year, q = era[0], era[1]; must = era[2] if len(era) > 2 else []; never = era[3] if len(era) > 3 else []
+        try:
+            pages = {p["title"]: p for p in search(q)}
+            if must:   # second search: titles that contain the most specific token
+                tok = must[-1][0].rstrip("*")
+                for p in search(f'intitle:"{tok}" {q.split()[0]}'): pages.setdefault(p["title"], p)
+            cs = candidates(list(pages.values()), used, must, never)
         except Exception as e: print("search failed", q, e, file=sys.stderr); cs = []
         pick = cs[:per]
         if not pick:
