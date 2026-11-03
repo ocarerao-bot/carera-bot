@@ -106,6 +106,12 @@ def run(state_path=os.path.join(HERE, "state.json")):
         tg("sendMessage", chat_id=chat, disable_web_page_preview="true",
            text="Credits (copy into the post, mark edits!):\n" + "\n".join(lines) +
                 "\n\nTip: download the ORIGINAL from the Commons page for full resolution.")
+    pr = car.get("prices") or {}
+    if pr:
+        lines = [f"<b>{e[0]}</b>: {esc(pr[e[0]]['price'])} – {esc(pr[e[0]]['note'])}" for e in car["eras"] if e[0] in pr]
+        src = "\n".join(f'<a href="{pr[e[0]]["src"]}">source {e[0]}</a>' for e in car["eras"] if e[0] in pr)
+        tg("sendMessage", chat_id=chat, parse_mode="HTML", disable_web_page_preview="true",
+           text="💰 <b>What it cost new</b>\n" + "\n".join(lines) + "\n\n" + src)
     st["next"] += 1; st["used"] = sorted(used)
     json.dump(st, open(state_path, "w"), indent=1, ensure_ascii=False)
 
