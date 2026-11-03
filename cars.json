@@ -48,7 +48,14 @@
      ]
     ]
    ]
-  ]
+  ],
+  "prices": {
+   "2024": {
+    "price": "€104,655",
+    "note": "992 Carrera Coupé at launch (2019, Germany)",
+    "src": "https://gtspirit.com/2019/08/09/cheapest-porsche-992-launched-carrera-coupe-carbriolet/"
+   }
+  }
  },
  {
   "car": "Mini",
@@ -95,7 +102,24 @@
      ]
     ]
    ]
-  ]
+  ],
+  "prices": {
+   "1959": {
+    "price": "£496",
+    "note": "Morris Mini-Minor, UK",
+    "src": "https://www.bmwgroup-classic.com/en/models/mini-classics/product-description-page.ad-788-1.morris-mini-minor.html"
+   },
+   "2001": {
+    "price": "£11,600",
+    "note": "MINI Cooper (R50) at launch, UK",
+    "src": "https://evo.co.uk/mini/cooper/19635/Cooper%20S"
+   },
+   "2024": {
+    "price": "€28,900",
+    "note": "new Cooper C (petrol), Germany",
+    "src": "https://www.bimmertoday.de/2024/08/05/mini-cooper-c-f66-das-ist-das-gunstigste-auto-der-bmw-group"
+   }
+  }
  },
  {
   "car": "Ford Mustang",

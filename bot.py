@@ -71,6 +71,21 @@ def tg(method, **data):
 
 def esc(t): return html.escape(t, quote=False)
 
+def post_prices(car, chat):
+    pr = car.get("prices") or {}
+    if not pr: return
+    missing = [e[0] for e in car["eras"] if e[0] not in pr]
+    lines = [f"<b>{e[0]}</b>: {esc(pr[e[0]]['price'])} – {esc(pr[e[0]]['note'])}" for e in car["eras"] if e[0] in pr]
+    src = "\n".join(f'<a href="{pr[e[0]]["src"]}">source {e[0]}</a>' for e in car["eras"] if e[0] in pr)
+    tg("sendMessage", chat_id=chat, parse_mode="HTML", disable_web_page_preview="true",
+       text="💰 <b>What it cost new</b>\n" + "\n".join(lines) +
+            (f"\n{', '.join(missing)}: price still being checked" if missing else "") + "\n\n" + src)
+
+def prices_only(names):
+    cars = json.load(open(os.path.join(HERE, "cars.json"))); chat = os.getenv("TELEGRAM_CHAT_ID", "dry")
+    for c in cars:
+        if c["car"].lower() in names: post_prices(c, chat)
+
 def run(state_path=os.path.join(HERE, "state.json")):
     cars = json.load(open(os.path.join(HERE, "cars.json")))
     st = load_state(state_path); used = set(st["used"]); per = int(os.getenv("PHOTOS_PER_ERA", "3"))
@@ -106,14 +121,13 @@ def run(state_path=os.path.join(HERE, "state.json")):
         tg("sendMessage", chat_id=chat, disable_web_page_preview="true",
            text="Credits (copy into the post, mark edits!):\n" + "\n".join(lines) +
                 "\n\nTip: download the ORIGINAL from the Commons page for full resolution.")
-    pr = car.get("prices") or {}
-    if pr:
-        lines = [f"<b>{e[0]}</b>: {esc(pr[e[0]]['price'])} – {esc(pr[e[0]]['note'])}" for e in car["eras"] if e[0] in pr]
-        src = "\n".join(f'<a href="{pr[e[0]]["src"]}">source {e[0]}</a>' for e in car["eras"] if e[0] in pr)
-        tg("sendMessage", chat_id=chat, parse_mode="HTML", disable_web_page_preview="true",
-           text="💰 <b>What it cost new</b>\n" + "\n".join(lines) + "\n\n" + src)
+    post_prices(car, chat)
     st["next"] += 1; st["used"] = sorted(used)
     json.dump(st, open(state_path, "w"), indent=1, ensure_ascii=False)
 
 if __name__ == "__main__":
-    run()
+    trig = open(os.path.join(HERE, "trigger.txt")).read().strip() if os.path.exists(os.path.join(HERE, "trigger.txt")) else ""
+    if os.getenv("GITHUB_EVENT_NAME") == "push" and trig.lower().startswith("prices:"):
+        prices_only({n.strip().lower() for n in trig.split(":", 1)[1].split(",")})
+    else:
+        run()
