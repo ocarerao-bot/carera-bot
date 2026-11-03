@@ -1,0 +1,23 @@
+name: Fetch photos for a video
+on:
+  push:
+    paths: ["fetch.txt"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - run: python fetch.py
+        env:
+          CONTACT: ${{ secrets.CONTACT }}
+      - run: |
+          git config user.name "carera-bot"
+          git config user.email "carera-bot@users.noreply.github.com"
+          git add photos
+          git commit -m "fetched photos" || echo "nothing"
+          git pull --rebase && git push
