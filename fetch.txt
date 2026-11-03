@@ -1,10 +1,2 @@
-dir: mini
-File:BMW MINI COOPER (R50) at night front.JPG
-File:BMW MINI COOPER 3door E (J01) front.jpg
-File:MINI J01 Cooper SE Favoured Blazing Blue (1).jpg
-File:MINI J01 Cooper SE Favoured Vescin Beige (1).jpg
-File:Mini R50 Cooper Absolute Black (1).jpg
-File:Mini new Gen1 R50.52.53 2002-2006 LUCKY STRKE frontright 2008-07-06 U.jpg
-File:Morris Mini Cooper.jpg
-File:Morris Mini Minor à Genève 2019-03-05 (1).jpg
-File:Morris Mini Traveller (23110314583).jpg
+dir: mustang
+car: Ford Mustang
