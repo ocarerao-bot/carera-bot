@@ -1,0 +1,2 @@
+https://huggingface.co/rhasspy/piper-voices/resolve/main/fa/fa_IR/amir/medium/fa_IR-amir-medium.onnx fa_IR-amir-medium.onnx
+https://huggingface.co/rhasspy/piper-voices/resolve/main/fa/fa_IR/amir/medium/fa_IR-amir-medium.onnx.json fa_IR-amir-medium.onnx.json

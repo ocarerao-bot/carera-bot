@@ -1,0 +1,16 @@
+name: Fetch files by URL
+on:
+  push:
+    paths: ["urls.txt"]
+permissions:
+  contents: write
+jobs:
+  dl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p dl
+          while read -r url path; do [ -z "$url" ] && continue; curl -sSL --fail -o "dl/$path" "$url" && echo "ok $path"; done < urls.txt
+          git config user.name "carera-bot"; git config user.email "carera-bot@users.noreply.github.com"
+          git add dl; git commit -m "fetched urls" || echo nothing; git pull --rebase && git push
