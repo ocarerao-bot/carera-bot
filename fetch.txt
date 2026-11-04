@@ -1,2 +1,9 @@
-dir: mustang
-car: Ford Mustang
+dir: beetle
+File:1950 Volkswagen Käfer at Stuttgart Porsche Museum(Ank Kumar, Infosys Limited) 02.jpg
+File:1950 Volkswagen Käfer at Stuttgart Porsche Museum(Ank Kumar, Infosys Limited) 05.jpg
+File:1999 Volkswagen New Beetle GLS, front left, 06-13-2023.jpg
+File:2006 Volkswagen New Beetle Luna 1.6 Front.jpg
+File:2009 Volkswagen New Beetle sedan, front right, 09-06-2025.jpg
+File:Volkswagen Beetle A5 Shishi 02 2022-09-26.jpg
+File:Volkswagen Beetle de 1965.jpg
+car: VW Beetle
