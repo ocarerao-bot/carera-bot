@@ -1,4 +1,13 @@
-dir: porsche
-search: Porsche 911 1965 || 911 ; 1964,1965,1966,1967,1968
-search: Porsche 911 Carrera 996 || 996
-search: Porsche 911 Carrera 992 || 992
+dir: bmw
+File:BMW 3 SERIES (E46) China (1).jpg
+File:BMW 3 SERIES LWB SEDAN (G20) China (51).jpg
+File:BMW 323 E21 1X7A0260.jpg
+File:BMW 325Ci (E46) Washington DC Metro Area, USA (1).jpg
+File:BMW 325i (E46) Washington DC Metro Area, USA (1).jpg
+File:BMW E21 315 Wien 26 July 2020 JM (1).jpg
+File:BMW E21 Front.jpg
+File:BMW M340i (G20) Washington DC Metro Area, USA (1).jpg
+File:BMW MINI COOPER (R50) at night front.JPG
+File:BMW MINI COOPER 3door E (J01) front.jpg
+File:G20-Front.jpg
+car: BMW 3 Series
