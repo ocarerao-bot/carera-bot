@@ -1,13 +1,13 @@
-dir: bmw
-File:BMW 3 SERIES (E46) China (1).jpg
-File:BMW 3 SERIES LWB SEDAN (G20) China (51).jpg
-File:BMW 323 E21 1X7A0260.jpg
-File:BMW 325Ci (E46) Washington DC Metro Area, USA (1).jpg
-File:BMW 325i (E46) Washington DC Metro Area, USA (1).jpg
-File:BMW E21 315 Wien 26 July 2020 JM (1).jpg
-File:BMW E21 Front.jpg
-File:BMW M340i (G20) Washington DC Metro Area, USA (1).jpg
-File:BMW MINI COOPER (R50) at night front.JPG
-File:BMW MINI COOPER 3door E (J01) front.jpg
-File:G20-Front.jpg
-car: BMW 3 Series
+dir: sl
+File:Mercedes-AMG R232 SL 43 MANUFAKTUR Alpine Grey (1).jpg
+File:Mercedes-AMG SL 63 4MATIC+ (R232) front.jpg
+File:Mercedes-Benz R129 300 SL (1).jpg
+File:Mercedes-Benz SL R129 .jpg
+File:Mercedes-Benz SL-Class (R129).jpg
+File:Mercedes-Benz W113 230 SL 6170647.jpg
+File:Mercedes-Benz W113 280 SL Classic-Gala 2021 1X7A0104.jpg
+File:Mercedes-Benz W113 280SL green (1).jpg
+File:The frontview of Mercedes-AMG SL 63 4MATIC+ (R232).jpg
+search: Mercedes-Benz 280 SL W113 || W113
+search: Mercedes-Benz 500 SL R129 || R129
+search: Mercedes-AMG SL 55 R232 || R232
