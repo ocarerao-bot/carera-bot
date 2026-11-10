@@ -1,13 +1,13 @@
-dir: sl
-File:Mercedes-AMG R232 SL 43 MANUFAKTUR Alpine Grey (1).jpg
-File:Mercedes-AMG SL 63 4MATIC+ (R232) front.jpg
-File:Mercedes-Benz R129 300 SL (1).jpg
-File:Mercedes-Benz SL R129 .jpg
-File:Mercedes-Benz SL-Class (R129).jpg
-File:Mercedes-Benz W113 230 SL 6170647.jpg
-File:Mercedes-Benz W113 280 SL Classic-Gala 2021 1X7A0104.jpg
-File:Mercedes-Benz W113 280SL green (1).jpg
-File:The frontview of Mercedes-AMG SL 63 4MATIC+ (R232).jpg
-search: Mercedes-Benz 280 SL W113 || W113
-search: Mercedes-Benz 500 SL R129 || R129
-search: Mercedes-AMG SL 55 R232 || R232
+dir: opel
+File:1991-1994 Opel Astra F GSi 01 Front.jpg
+File:Opel Astra F COOL edition 1996.jpg
+File:Opel Astra F front 20071019.jpg
+File:Opel Astra L GSe IMG 8192.jpg
+File:Opel Astra L PHEV Leonberg 2022 1X7A0420.jpg
+File:Opel Astra L Sports Tourer 1X7A7239.jpg
+File:Opel Kadett C Coupe front 20080206.jpg
+File:Opel Kadett C Coupé 5311863.jpg
+File:Opel Kadett C GTE (Foto Sp 2016-06-05).JPG
+search: Opel Kadett C coupe front || Kadett C
+search: Opel Astra F front || Astra F
+search: Opel Astra L front || Astra L
