@@ -1,9 +1,5 @@
-dir: miniside3
-search: Mini Cooper Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Morris Mini side view || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Austin Mini Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Mini R50 side || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Mini R53 Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Mini Cooper SE J01 Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Mini Cooper F66 side || Mini; side,Seitenansicht,profile,profil*,lateral
-search: Mini 1000 side || Mini; side,Seitenansicht,profile,profil*,lateral
+dir: minij01
+search: MINI Cooper J01 || J01 || front,frontansicht,rear,heck,interior,IAA,vorne
+search: MINI Cooper SE 2024 || Mini; 2024,2025,J01 || front,frontansicht,rear,heck,interior,vorne,Countryman,Aceman
+search: MINI Cooper F66 || F66 || front,frontansicht,rear,heck,interior,vorne
+search: Mini Cooper E electric 2024 || Mini; Cooper || front,frontansicht,rear,heck,interior,vorne,Countryman,Aceman,Clubman

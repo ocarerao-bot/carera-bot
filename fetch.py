@@ -25,12 +25,13 @@ for l in lines:
             for c in bot.candidates(list(pages.values()), set(), must, never)[:5]: titles.append(c["title"])
     elif l.lower().startswith("search:"):
         import bot
-        q, _, m = l.split(":", 1)[1].partition("||")
+        q, _, m = l.split(":", 1)[1].partition("||"); m, _, nv = m.partition("||")
         must = [[t.strip() for t in g.split(",") if t.strip()] for g in m.split(";")] if m.strip() else []
+        never = [t.strip() for t in nv.split(",") if t.strip()]
         pages = {p["title"]: p for p in bot.search(q.strip())}
         if must:
             for p in bot.search(f'intitle:"{must[-1][0]}" {q.split()[0]}'): pages.setdefault(p["title"], p)
-        for c in bot.candidates(list(pages.values()), set(), must, [])[:6]: titles.append(c["title"])
+        for c in bot.candidates(list(pages.values()), set(), must, never)[:8]: titles.append(c["title"])
     else: titles.append(l)
 for t in titles:
     r = S.get("https://commons.wikimedia.org/w/api.php", params=dict(action="query", format="json", titles=t,
