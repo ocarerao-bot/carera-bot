@@ -1,10 +1,9 @@
-dir: miniside2
-search: Mini Seitenansicht || Seitenansicht
-search: Mini side view || side
-search: Mini Cooper side || side
-search: Morris Mini-Minor side || side
-search: Austin Mini side || side
-search: Mini R50 Seitenansicht || Seitenansicht
-search: Mini Cooper J01 side || side
-search: Mini Cooper SE side || side
-search: Mini profile classic || profile
+dir: miniside3
+search: Mini Cooper Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Morris Mini side view || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Austin Mini Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Mini R50 side || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Mini R53 Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Mini Cooper SE J01 Seitenansicht || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Mini Cooper F66 side || Mini; side,Seitenansicht,profile,profil*,lateral
+search: Mini 1000 side || Mini; side,Seitenansicht,profile,profil*,lateral
