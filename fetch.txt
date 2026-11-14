@@ -1,4 +1,8 @@
-dir: rrp38
-search: Range Rover P38 front left || P38
-search: Range Rover 4.6 HSE 1995 front || Range Rover
-search: Range Rover Second generation P38A 1994 || P38
+dir: miniside
+search: Morris Mini Minor side view || Mini
+search: Austin Mini side profile 1959 || Mini
+search: Mini Cooper R50 side view || R50
+search: Mini Cooper R50 profile || Mini
+search: Mini Cooper 2024 J01 side || Mini
+search: Mini Cooper F66 side view || Mini
+search: Mini Cooper E 2024 side || Mini
