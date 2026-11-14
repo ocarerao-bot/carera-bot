@@ -1,10 +1,10 @@
-dir: landrover
-File:1957 Land Rover Series I Station Wagon front q.jpg
-File:1958 Land Rover Series I.jpg
-File:Land Rover Defender (L663) Washington DC Metro Area, USA (1).jpg
-File:Land Rover Defender 110 (L316), front view.jpg
-File:Land Rover Defender 110 V8 (L663) Washington DC Metro Area, USA (1).jpg
-File:Land Rover Defender 110 XS TD DC 2015 - front.jpg
-search: Land Rover Series I 1948 80 inch front || Series I
-search: Land Rover Defender 90 Td5 front || Defender
-search: Land Rover Defender 90 L663 front || Defender
+dir: rangerover
+File:Range Rover Classic 2-door in Astral Silver, front left.jpg
+File:Range Rover Classic 2-Door at Legendy 2018 in Prague.jpg
+File:1998 Range Rover P38 4.6 HSE (26749125834).jpg
+File:1998 Range Rover P38 4.6 HSE (27081004370).jpg
+File:Land Rover Range Rover Autobiography L460 Deep Garnet (1).jpg
+File:Range Rover (L460) Washington DC Metro Area, USA (1).jpg
+search: Range Rover Classic 1970 two door front || Range Rover
+search: Range Rover P38 front 1995 || P38
+search: Range Rover L460 front || L460
