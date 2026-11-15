@@ -1,5 +1,13 @@
-dir: minij01
-search: MINI Cooper J01 || J01 || front,frontansicht,rear,heck,interior,IAA,vorne
-search: MINI Cooper SE 2024 || Mini; 2024,2025,J01 || front,frontansicht,rear,heck,interior,vorne,Countryman,Aceman
-search: MINI Cooper F66 || F66 || front,frontansicht,rear,heck,interior,vorne
-search: Mini Cooper E electric 2024 || Mini; Cooper || front,frontansicht,rear,heck,interior,vorne,Countryman,Aceman,Clubman
+dir: jeep
+File:'04-'06 Jeep Wrangler TJ Convertible (Orange Julep).jpg
+File:1946 Jeep CJ-2A in Olive Drab, front left (Greenwich 2024).jpg
+File:1956 Willys CJ2A Jeep at 2021 Macungie show 4of4.jpg
+File:Jeep TJ Wrangler sport.jpg
+File:Jeep Wrangler (JL) Washington DC Metro Area, USA (1).jpg
+File:Jeep Wrangler (JL) Washington DC Metro Area, USA (7).jpg
+File:Jeep Wrangler (TJ) Sahara front.jpg
+File:Jeep Wrangler Rubicon 2.0L JL Black (1).jpg
+File:Willys-Overland CJ-2A.jpg
+search: Willys CJ-2A || CJ-2A,CJ2A || interior,engine,rear,dashboard,motor
+search: Jeep Wrangler TJ || Wrangler; TJ || interior,engine,rear,dashboard,heck
+search: Jeep Wrangler JL || Wrangler; JL || interior,engine,rear,dashboard,heck,JT,Gladiator
