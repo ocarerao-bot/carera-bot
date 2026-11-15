@@ -114,7 +114,7 @@ hashtags), YouTube Shorts (`Title:` / `Description:` / `Tags:` lines, title with
 and a `## Voice-over script` section (the LINES of the mix with their time slots).
 Keep one `## ` heading per piece: `deliver.py` sends EVERY piece as its own Telegram message (label + code block with
 copy button; YouTube split into title / description / tags) – the user wants to copy them one by one.
-Remind the user (Farsi) to set the AI label on all three platforms. List sources (links) in the German message.
+Remind the user (Farsi) to set the AI label on all three platforms. List sources (links) in the Farsi message.
 
 ## 9. Delivery
 
