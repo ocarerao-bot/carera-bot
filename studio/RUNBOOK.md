@@ -110,7 +110,10 @@ Music a bit louder, SFX quieter (templates already balanced). Mixes: `mix10_am_a
 
 TikTok (short line + hashtags incl. #carera), Instagram (facts/prices list, question, **photo credits:
 author, licence, "via Wikimedia Commons, edited (cut-out, plates removed, …)"**, "Voice & graphics AI-assisted",
-hashtags), YouTube Shorts (title with #shorts, description with credits, tags), pinned comment.
+hashtags), YouTube Shorts (`Title:` / `Description:` / `Tags:` lines, title with #shorts, description with credits), pinned comment,
+and a `## Voice-over script` section (the LINES of the mix with their time slots).
+Keep one `## ` heading per piece: `deliver.py` sends EVERY piece as its own Telegram message (label + code block with
+copy button; YouTube split into title / description / tags) – the user wants to copy them one by one.
 Remind the user (German) to set the AI label on all three platforms. List sources (links) in the German message.
 
 ## 9. Delivery
@@ -131,7 +134,8 @@ cd $D && git init -q -b deliver && git add -A && git commit -qm "Deliver <Car> <
   && git push -f https://github.com/ocarerao-bot/carera-bot.git deliver
 ```
    (use the same git credentials/remote as the clone; end commit messages with the attribution lines of the session).
-   Check the Action run (`gh run list --branch deliver -L 1`) succeeded.
+   Check the Action run (`gh run list --branch deliver -L 1`) succeeded (deliver.py exits 1 if any Telegram call failed).
+   An item without `"video"` sends only its texts (useful to resend captions without the videos).
 
 ## Never
 - Never write the Telegram token or the user's e-mail into any file, message or log. Secrets stay in GitHub.
