@@ -2,7 +2,7 @@
 
 Read this whole file before starting. It is the brief for the daily automatic run
 (scheduled 08:30 Europe/Berlin). The user is Raa Shid (CarEra channel: TikTok, Instagram,
-YouTube Shorts). **Talk to him in German.** The videos themselves are in **English**.
+YouTube Shorts). **Talk to him in Farsi (Persian).** The videos themselves are in **English**.
 
 Goal of every run: from the bot's *car of the day* make **two finished videos**
 (1080×1920, 30 fps, exactly 20.0 s, 5 scenes × 4 s) plus caption texts, and deliver them.
@@ -114,11 +114,11 @@ hashtags), YouTube Shorts (`Title:` / `Description:` / `Tags:` lines, title with
 and a `## Voice-over script` section (the LINES of the mix with their time slots).
 Keep one `## ` heading per piece: `deliver.py` sends EVERY piece as its own Telegram message (label + code block with
 copy button; YouTube split into title / description / tags) – the user wants to copy them one by one.
-Remind the user (German) to set the AI label on all three platforms. List sources (links) in the German message.
+Remind the user (Farsi) to set the AI label on all three platforms. List sources (links) in the German message.
 
 ## 9. Delivery
 
-a) Send the 4 videos + captions in this session with SendUserFile, and a short German summary
+a) Send the 4 videos + captions in this session with SendUserFile, and a short Farsi summary
    (what the car is, which colours/photos, anything to know, captions in code blocks).
 b) Telegram: create an orphan branch `deliver` containing ONLY `deliver.py`, `.github/workflows/deliver.yml`
    (copy from `studio/deliver/`) and `out/` (videos with music + caption .md files + `out/deliver.json`), force-push it:

@@ -40,7 +40,7 @@ for it in d["items"]:
         with open(it["video"], "rb") as f:
             r = post("sendVideo", data=dict(chat_id=C, caption=it.get("caption", "")[:1000], supports_streaming="true"),
                      files=dict(video=(os.path.basename(it["video"]), f, "video/mp4")))
-        if not r.ok: msg(f"⚠️ Video {it['video']} konnte nicht gesendet werden ({r.status_code}).")
+        if not r.ok: msg(f"⚠️ Video {it['video']} ارسال نشد ({r.status_code}).")
     elif it.get("caption"):
         msg(f"📝 {it['caption']}")
     if it.get("texts") and os.path.exists(it["texts"]):
