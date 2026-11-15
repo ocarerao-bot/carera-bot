@@ -1,0 +1,19 @@
+name: upload video to higgsfield
+on:
+  workflow_dispatch:
+    inputs:
+      ref: { description: "branch with the video", required: true }
+      path: { description: "video path in that branch", required: true }
+      url: { description: "presigned upload url", required: true }
+jobs:
+  put:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ inputs.ref }}" }
+      - name: PUT
+        env: { U: "${{ inputs.url }}", P: "${{ inputs.path }}" }
+        run: |
+          echo "::add-mask::$U"
+          code=$(curl -sS -o /dev/null -w "%{http_code}" -X PUT -H "Content-Type: video/mp4" --data-binary @"$P" "$U")
+          echo "HTTP $code"; [ "$code" = "200" ]
