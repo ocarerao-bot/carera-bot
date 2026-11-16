@@ -61,9 +61,14 @@ Worked examples: `studio/templates/prep_example_*.py`.
 
 **Colours (user is strict about this):** colour must be one the brand really offered in that era.
 Oldtimer → 60s/70s colours; youngtimer → 80s/90s/2000s colours; today → elegant metallic
-(smoky/anthracite grey, lapis/deep blue, cherry-red metallic, deep green). Keep the original colour when
-it already fits; recolour only when needed (examples: `recolor_silver` in `price_sl.py`, red recolour in
+(lapis/deep blue, cherry-red metallic, deep green). Keep the original colour when
+it already fits AND is expressive; recolour only when needed (examples: `recolor_silver` in `price_sl.py`, red recolour in
 `r5prep.py`-era code, grey recolour in `prep_example_rangerover.py`). Two eras should not share a colour.
+**More expressive colours (user, 2026-11-16):** every car must have a strong, saturated factory colour of its era
+(e.g. red, orange, yellow, bright/deep blue, green, bronze/sand, cherry-red metallic, lapis blue). Avoid plain silver,
+white, grey and black: prefer a photo in a bold colour, otherwise recolour to a bold colour the brand really offered
+in that era (name it in the captions). Elegant metallic for today's car is fine only if it is clearly coloured
+(deep blue, cherry red, deep green), not grey/anthracite.
 Recolour must not tint glass, lights, tyres or bumpers – exclude them with polygons and check.
 
 ## 4. Video 1 – "One car. Three eras."
