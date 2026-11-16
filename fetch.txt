@@ -1,13 +1,5 @@
-dir: jeep
-File:'04-'06 Jeep Wrangler TJ Convertible (Orange Julep).jpg
-File:1946 Jeep CJ-2A in Olive Drab, front left (Greenwich 2024).jpg
-File:1956 Willys CJ2A Jeep at 2021 Macungie show 4of4.jpg
-File:Jeep TJ Wrangler sport.jpg
-File:Jeep Wrangler (JL) Washington DC Metro Area, USA (1).jpg
-File:Jeep Wrangler (JL) Washington DC Metro Area, USA (7).jpg
-File:Jeep Wrangler (TJ) Sahara front.jpg
-File:Jeep Wrangler Rubicon 2.0L JL Black (1).jpg
-File:Willys-Overland CJ-2A.jpg
-search: Willys CJ-2A || CJ-2A,CJ2A || interior,engine,rear,dashboard,motor
-search: Jeep Wrangler TJ || Wrangler; TJ || interior,engine,rear,dashboard,heck
-search: Jeep Wrangler JL || Wrangler; JL || interior,engine,rear,dashboard,heck,JT,Gladiator
+dir: landcruiser
+car: Toyota Land Cruiser
+search: Toyota Land Cruiser FJ40 || FJ40,FJ 40,J40 || interior,engine,rear,dashboard,motor,rally
+search: Toyota Land Cruiser 100 || Land Cruiser 100,J100,100 Series,UZJ100,HDJ100 || interior,engine,rear,dashboard,heck,Lexus
+search: Toyota Land Cruiser 250 || Land Cruiser 250,J250,Prado 250 || interior,engine,rear,dashboard,heck
