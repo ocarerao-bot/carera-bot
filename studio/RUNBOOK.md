@@ -97,6 +97,10 @@ Copy `src/price_rr.py` → `src/price_<slug>.py`, `templates/mix_price.py` → `
   the FIXED question label **"WHAT'S YOUR PRICE ERA? ↓"** (user's choice, 2026-11-16; replaces "YEAR OR YEAR? YOU ONLY GET ONE"),
   COMMENT!, pulsing FOLLOW +. Voice e.g. "N old ones for one new one... what's your price era?". Never "what was your first car".
 
+**Make the two videos look different (user, 2026-11-16):** the price video must not look like a copy of the eras video.
+Use other background palettes/poster sets/seeds than the eras video (e.g. rotate `U.CFG` pals, new seeds), and where possible
+other photos (another bold colour / angle of the same generation). Never mirror a car that shows lettering (badges read backwards).
+
 ## 6. Voice and sound (both videos)
 
 Kokoro `am_adam`, speed **0.97**. Short, natural spoken sentences, unhurried, ≤ ~3.8 s per scene.
