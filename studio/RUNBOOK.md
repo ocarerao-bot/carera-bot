@@ -73,7 +73,8 @@ Copy the Land Rover set and adapt: `src/lrcfg.py` → `src/<slug>cfg.py`, `src/a
 - Per era: `year`, `car` (cut-out png), `carw` (~860–1000; oldtimer slightly smaller), `strip` (era label),
   `w1` (big word), `w2` (handwritten line), `s1`/`s2` (two short stat discs, ≤5 chars each line).
 - Content: one **real technical/unique fact per generation** (verify with sources). **No prices. No "1/2/3" numbering.**
-- Hook label (short teaser), CTA = a **debate question** (e.g. "KADETT OR ASTRA?", "STILL A REAL DEFENDER?").
+- Hook label (short teaser). CTA is FIXED (user's choice, 2026-11-16): big text **"WHICH ERA" / "IS YOUR ERA?"**,
+  subtitle "WHICH ERA IS / YOUR ERA? ↓", voice e.g. "So... which era is your era?". Do not use "be honest" / debate lines.
 - Voice lines in `LINES` (hook, e74, e97, e24, cta) + subtitle `CHUNKS` (style C, as in the template).
   After the mix: `sub/timing.json` → set `cta[-1].t1 = 4.0` (see history in Opel run).
 
@@ -88,7 +89,8 @@ Copy `src/price_rr.py` → `src/price_<slug>.py`, `templates/mix_price.py` → `
   Not inflation-adjusted (say so in the captions).
 - Voice says the **full number with "dollars"** ("Twenty-nine thousand, four hundred eighty dollars").
 - CTA: "N OF THESE = ONE NEW ONE" with N = floor(new/old) small cars in a grid, plus
-  "YEAR OR YEAR? YOU ONLY GET ONE ↓", COMMENT!, pulsing FOLLOW +. Never "what was your first car".
+  the FIXED question label **"WHAT'S YOUR PRICE ERA? ↓"** (user's choice, 2026-11-16; replaces "YEAR OR YEAR? YOU ONLY GET ONE"),
+  COMMENT!, pulsing FOLLOW +. Voice e.g. "N old ones for one new one... what's your price era?". Never "what was your first car".
 
 ## 6. Voice and sound (both videos)
 
@@ -110,7 +112,8 @@ Music a bit louder, SFX quieter (templates already balanced). Mixes: `mix10_am_a
 
 TikTok (short line + hashtags incl. #carera), Instagram (facts/prices list, question, **photo credits:
 author, licence, "via Wikimedia Commons, edited (cut-out, plates removed, …)"**, "Voice & graphics AI-assisted",
-hashtags), YouTube Shorts (`Title:` / `Description:` / `Tags:` lines, title with #shorts, description with credits), pinned comment,
+hashtags), YouTube Shorts (`Title:` / `Description:` / `Tags:` lines, title with #shorts, description with credits), pinned comment
+(answer the CTA yourself first, e.g. "My era: 1960 🟥 What's yours? 👇" / "My price era: 1979 💸 Yours? 👇"),
 and a `## Voice-over script` section (the LINES of the mix with their time slots).
 Keep one `## ` heading per piece: `deliver.py` sends EVERY piece as its own Telegram message (label + code block with
 copy button; YouTube split into title / description / tags) – the user wants to copy them one by one.
