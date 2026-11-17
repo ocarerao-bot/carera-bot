@@ -97,9 +97,15 @@ Copy `src/price_rr.py` → `src/price_<slug>.py`, `templates/mix_price.py` → `
   the FIXED question label **"WHAT'S YOUR PRICE ERA? ↓"** (user's choice, 2026-11-16; replaces "YEAR OR YEAR? YOU ONLY GET ONE"),
   COMMENT!, pulsing FOLLOW +. Voice e.g. "N old ones for one new one... what's your price era?". Never "what was your first car".
 
-**Make the two videos look different (user, 2026-11-16):** the price video must not look like a copy of the eras video.
-Use other background palettes/poster sets/seeds than the eras video (e.g. rotate `U.CFG` pals, new seeds), and where possible
-other photos (another bold colour / angle of the same generation). Never mirror a car that shows lettering (badges read backwards).
+**The two videos differ ONLY in the car colours (user, 2026-11-17 – replaces the 2026-11-16 note):** keep the template
+backgrounds exactly as in the templates (eras: `U.CFG` palettes/posters/seeds unchanged as in `lrcfg.py`; price: era i uses
+`U.CFG[i]` palette/posters with seeds 11/21/31 as in `price_rr.py`). Do NOT rotate palettes, posters or seeds. What changes between
+the two videos is the car colour (another bold photo of the same generation, or a recolour to another real factory colour).
+Never mirror a car that shows lettering (badges read backwards).
+
+**Cars big (user, 2026-11-17: "the cars got a bit small"):** eras `carw` ≈ 1000–1060 (near-square front-on photos ≥ 900),
+trio `trw` ≈ 520–650; price `cw` ≈ 880–1020, hook new car 800 / old car 760, CTA grid cars ≥ 320, CTA new car ≈ 560.
+Check in the preview that nothing is cut off at the edges and the texts stay readable.
 
 ## 6. Voice and sound (both videos)
 
