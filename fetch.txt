@@ -1,8 +1,15 @@
-dir: gtr
-car: Nissan GT-R
-search: Nissan Skyline GT-R KPGC10 || KPGC10,PGC10,Hakosuka,GT-R,2000GT-R || interior,engine,rear,dashboard,heck,motor,race,racing,replica
-search: Hakosuka Skyline 2000GT-R || KPGC10,PGC10,Hakosuka,2000GT-R || interior,engine,rear,dashboard,heck,motor,race,racing
-search: Nissan Skyline GT-R R34 Bayside Blue || R34,BNR34 || interior,engine,rear,dashboard,heck,motor,race,drift,tuned,JGTC
-search: Nissan Skyline GT-R R34 V-spec || R34,BNR34 || interior,engine,rear,dashboard,heck,motor,race,drift,tuned,JGTC
-search: Nissan GT-R R35 2017 || R35,GT-R || interior,engine,rear,dashboard,heck,motor,race,GT3,Nismo,drift,police
-search: Nissan GT-R R35 orange || R35,GT-R || interior,engine,rear,dashboard,heck,motor,race,GT3,drift,police
+dir: gtr2
+File:Nissan Skyline R34 GT-R GF-BNR34 White (1).jpg
+File:MIAS 2024 - 2024 Nissan GT-R R35 (1).jpg
+File:Nissan GT-R Nismo (R35), 2022, front.jpg
+File:Nissan GT-R T-spec (R35), 2021, left-front.jpg
+File:Nissan GT-R (R35) Washington DC Metro Area, USA (1).jpg
+File:1999 Nissan Skyline R34 GT-R V-Spec front.jpg
+File:Nissan SKYLINE GT-R V-spec (GF-BNR34) front.jpg
+File:Nissan GT-R Premium edition T-Spec (4BA-R35) front.jpg
+File:The frontview of Nissan GT-R (4BA-R35) tuned by ROHAN IZAWA ART DESIGN.jpg
+File:Nissan GT-R Premium Edition (DBA-R35) front.jpg
+File:Nissan GT-R (4BA-R35) front.jpg
+File:Nissan GT-R MY2017 (1) (cropped).jpg
+File:2017 Nissan GT-R Premium, Front Right, 07-12-2021.jpg
+File:Nissan GT-R MY2017 (1).jpg

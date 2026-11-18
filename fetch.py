@@ -39,7 +39,14 @@ for t in titles:
     p = next(iter(r["query"]["pages"].values())); ii = p["imageinfo"][0]; md = ii["extmetadata"]
     url = ii.get("thumburl") or ii["url"]
     fn = re.sub(r"[^A-Za-z0-9._-]+", "_", t.split(":", 1)[1])
-    open(os.path.join(out, fn), "wb").write(S.get(url, timeout=120).content)
+    import time
+    for attempt in range(6):  # Commons sometimes answers with an HTML error page (rate limit) -> retry
+        resp = S.get(url, timeout=120)
+        if resp.ok and resp.headers.get("content-type", "").startswith("image/"): break
+        print("retry", attempt, resp.status_code, fn); time.sleep(8 * (attempt + 1))
+    else:
+        print("FAILED", fn); continue
+    open(os.path.join(out, fn), "wb").write(resp.content); time.sleep(2)
     clean = lambda v: html.unescape(re.sub(r"<[^>]+>", "", v or "")).strip()
     cred[fn] = dict(title=t, page=ii.get("descriptionurl"), author=clean(md.get("Artist", {}).get("value")),
                     license=md.get("LicenseShortName", {}).get("value"), attribution=clean(md.get("Attribution", {}).get("value")))
