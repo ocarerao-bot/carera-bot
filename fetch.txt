@@ -1,8 +1,8 @@
-dir: supra
-car: Toyota Supra
-search: Toyota Celica Supra 1979 || Celica Supra,Celica XX,A40,MA46,MA47 || interior,engine,rear,dashboard,heck,motor,A60,Mk2,MkII
-search: Toyota Celica XX || Celica XX,Celica Supra,A40 || interior,engine,rear,dashboard,heck,motor,A60
-search: Toyota Supra A80 red || A80,JZA80,Mk4,MkIV,Mk IV || interior,engine,rear,dashboard,heck,motor,drift,race,tuned
-search: Toyota Supra JZA80 || A80,JZA80,Mk4,MkIV || interior,engine,rear,dashboard,heck,motor,drift,race
-search: Toyota GR Supra A90 || A90,GR Supra,J29,DB42 || interior,engine,rear,dashboard,heck,motor,race,GT4,Racing
-search: Toyota GR Supra Renaissance Red || GR Supra,A90 || interior,engine,rear,dashboard,heck,motor,race,GT4
+dir: gtr
+car: Nissan GT-R
+search: Nissan Skyline GT-R KPGC10 || KPGC10,PGC10,Hakosuka,GT-R,2000GT-R || interior,engine,rear,dashboard,heck,motor,race,racing,replica
+search: Hakosuka Skyline 2000GT-R || KPGC10,PGC10,Hakosuka,2000GT-R || interior,engine,rear,dashboard,heck,motor,race,racing
+search: Nissan Skyline GT-R R34 Bayside Blue || R34,BNR34 || interior,engine,rear,dashboard,heck,motor,race,drift,tuned,JGTC
+search: Nissan Skyline GT-R R34 V-spec || R34,BNR34 || interior,engine,rear,dashboard,heck,motor,race,drift,tuned,JGTC
+search: Nissan GT-R R35 2017 || R35,GT-R || interior,engine,rear,dashboard,heck,motor,race,GT3,Nismo,drift,police
+search: Nissan GT-R R35 orange || R35,GT-R || interior,engine,rear,dashboard,heck,motor,race,GT3,drift,police
