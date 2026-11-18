@@ -120,6 +120,7 @@ Music a bit louder, SFX quieter (templates already balanced). Mixes: `mix10_am_a
    texts not covered by cars, nothing cut off at the edges, cars big, no people, no plates.
 2. `python3 -I <script> render` (one mp4 per scene in `out/scenes/`).
 3. concat (`list.txt`, `-c copy`), then mux each audio with `-c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -shortest`.
+   Add `-movflags +faststart` to the mux (Telegram streaming/preview).
    Outputs: `carera_<slug>_eras.mp4`, `carera_<slug>_eras_ohne_musik.mp4`, `carera_<slug>_price.mp4`, `carera_<slug>_price_ohne_musik.mp4`.
 4. ffprobe = 20.0 s; grab 2–3 frames of the final file and look at them.
 
@@ -145,12 +146,14 @@ D=/home/claude/deliver && rm -rf $D && mkdir -p $D/out && cp -r /home/claude/car
 cp <final mp4s with music> <caption mds> $D/out/
 cat > $D/out/deliver.json <<J
 {"title": "<Car> – <date>", "items": [
- {"video": "out/carera_<slug>_eras.mp4", "caption": "One car. Three eras. – <Car>", "texts": "out/<slug>_eras_texts.md"},
- {"video": "out/carera_<slug>_price.mp4", "caption": "Guess the price – <Car>", "texts": "out/<slug>_price_texts.md"}]}
+ {"video": "out/carera_<slug>_eras.mp4", "thumb": "out/<slug>_eras_thumb.jpg", "width": 1080, "height": 1920, "duration": 20, "caption": "One car. Three eras. – <Car>", "texts": "out/<slug>_eras_texts.md"},
+ {"video": "out/carera_<slug>_price.mp4", "thumb": "out/<slug>_price_thumb.jpg", "width": 1080, "height": 1920, "duration": 20, "caption": "Guess the price – <Car>", "texts": "out/<slug>_price_texts.md"}]}
 J
 cd $D && git init -q -b deliver && git add -A && git commit -qm "Deliver <Car> <date>" \
   && git push -f https://github.com/ocarerao-bot/carera-bot.git deliver
 ```
+   Thumbs: `ffmpeg -ss 1 -i <video> -frames:v 1 -vf scale=320:-2 -q:v 4 out/<slug>_<x>_thumb.jpg` (Telegram needs width/height/duration +
+   thumbnail, otherwise the 9:16 video looks distorted in the chat – user, 2026-11-18).
    (use the same git credentials/remote as the clone; end commit messages with the attribution lines of the session).
    Check the Action run (`gh run list --branch deliver -L 1`) succeeded (deliver.py exits 1 if any Telegram call failed).
    An item without `"video"` sends only its texts (useful to resend captions without the videos).

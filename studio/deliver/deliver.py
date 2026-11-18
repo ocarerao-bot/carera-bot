@@ -37,9 +37,13 @@ d = json.load(open("out/deliver.json"))
 msg(f"🎬 CarEra – {d['title']}")
 for it in d["items"]:
     if it.get("video"):
-        with open(it["video"], "rb") as f:
-            r = post("sendVideo", data=dict(chat_id=C, caption=it.get("caption", "")[:1000], supports_streaming="true"),
-                     files=dict(video=(os.path.basename(it["video"]), f, "video/mp4")))
+        # Telegram does not always probe big files itself -> without width/height/duration/thumbnail
+        # the chat shows the 9:16 video squashed/distorted. So always send them explicitly.
+        meta = dict(width=it.get("width", 1080), height=it.get("height", 1920), duration=it.get("duration", 20))
+        files = dict(video=(os.path.basename(it["video"]), open(it["video"], "rb"), "video/mp4"))
+        if it.get("thumb") and os.path.exists(it["thumb"]): files["thumbnail"] = (os.path.basename(it["thumb"]), open(it["thumb"], "rb"), "image/jpeg")
+        r = post("sendVideo", data=dict(chat_id=C, caption=it.get("caption", "")[:1000], supports_streaming="true", **meta), files=files)
+        for fh in files.values(): fh[1].close()
         if not r.ok: msg(f"⚠️ Video {it['video']} ارسال نشد ({r.status_code}).")
     elif it.get("caption"):
         msg(f"📝 {it['caption']}")
