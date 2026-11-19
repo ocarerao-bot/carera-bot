@@ -1,7 +1,7 @@
 # CarEra daily studio – runbook
 
 Read this whole file before starting. It is the brief for the daily automatic run
-(scheduled 08:30 Europe/Berlin). The user is Raa Shid (CarEra channel: TikTok, Instagram,
+(scheduled 08:30 Europe/Berlin). The user is Rashid («رشید», CarEra channel: TikTok, Instagram,
 YouTube Shorts). **Talk to him in Farsi (Persian).** The videos themselves are in **English**.
 
 Goal of every run: from the bot's *car of the day* make **two finished videos**
