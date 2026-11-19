@@ -1,15 +1,8 @@
-dir: gtr2
-File:Nissan Skyline R34 GT-R GF-BNR34 White (1).jpg
-File:MIAS 2024 - 2024 Nissan GT-R R35 (1).jpg
-File:Nissan GT-R Nismo (R35), 2022, front.jpg
-File:Nissan GT-R T-spec (R35), 2021, left-front.jpg
-File:Nissan GT-R (R35) Washington DC Metro Area, USA (1).jpg
-File:1999 Nissan Skyline R34 GT-R V-Spec front.jpg
-File:Nissan SKYLINE GT-R V-spec (GF-BNR34) front.jpg
-File:Nissan GT-R Premium edition T-Spec (4BA-R35) front.jpg
-File:The frontview of Nissan GT-R (4BA-R35) tuned by ROHAN IZAWA ART DESIGN.jpg
-File:Nissan GT-R Premium Edition (DBA-R35) front.jpg
-File:Nissan GT-R (4BA-R35) front.jpg
-File:Nissan GT-R MY2017 (1) (cropped).jpg
-File:2017 Nissan GT-R Premium, Front Right, 07-12-2021.jpg
-File:Nissan GT-R MY2017 (1).jpg
+dir: mx5
+car: Mazda MX-5
+search: Mazda MX-5 NA front red || MX-5,Miata,Eunos;red || interior,engine,rear
+search: Mazda MX-5 NA blue front || MX-5,Miata,Eunos;NA || interior,engine,rear
+search: Mazda MX-5 NB front || MX-5,Miata;NB || interior,engine,rear
+search: Mazda MX-5 NB yellow front || MX-5,Miata;NB || interior,engine,rear
+search: Mazda MX-5 ND Soul Red front || MX-5,Miata,Roadster;ND || interior,engine,rear
+search: Mazda MX-5 ND blue front || MX-5,Miata,Roadster;ND || interior,engine,rear
