@@ -34,6 +34,7 @@ python3 -c "import json;c=json.load(open('cars.json'));s=json.load(open('state.j
 git log -1 --format=%H -- state.json | xargs -I{} git show {} -- state.json | grep '^+ '   # file titles the bot picked
 ```
 If the daily commit is not there yet, wait (poll every 2 min, max 30 min).
+If the car entry has a `"note"` field, read it and follow it (user requests / special cases).
 
 ## 2. Photos (Wikimedia Commons via GitHub Actions – the sandbox cannot reach Commons)
 
