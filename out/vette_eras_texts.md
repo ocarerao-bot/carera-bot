@@ -13,7 +13,7 @@ Colours shown: Polo White (1953 – the only colour that year), red (C5, origina
 Which era is your era? 👇
 
 Photo credits (via Wikimedia Commons, edited: cut-out, background removed, glass tinted):
-• 1953 Chevrolet Corvette front – TTTNIS, CC0 (edited: cut-out, museum sign removed)
+• 1953 Chevrolet Corvette front – TTTNIS, CC0 (edited: cut-out, museum sign removed, windscreen glass restored)
 • 2002 Chevrolet Corvette coupe, front left – MercurySable99, CC BY-SA 4.0 (edited: cut-out, glass tinted to hide the person inside)
 • 2020s Rapid Blue Chevrolet Corvette C8 – Oleg Yunakov, CC BY-SA 4.0 (edited: cut-out, windscreen tinted)
 Voice & graphics AI-assisted.

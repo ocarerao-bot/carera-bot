@@ -1,3 +1,3 @@
-{"title": "Chevrolet Corvette – 2026-11-21", "items": [
+{"title": "Chevrolet Corvette – 2026-11-21 (v2: windscreen + 1997 voice fixed)", "items": [
  {"video": "out/carera_vette_eras.mp4", "thumb": "out/vette_eras_thumb.jpg", "width": 1080, "height": 1920, "duration": 20, "caption": "One car. Three eras. – Chevrolet Corvette", "texts": "out/vette_eras_texts.md"},
  {"video": "out/carera_vette_price.mp4", "thumb": "out/vette_price_thumb.jpg", "width": 1080, "height": 1920, "duration": 20, "caption": "Guess the price – Chevrolet Corvette", "texts": "out/vette_price_texts.md"}]}

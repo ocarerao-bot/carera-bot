@@ -15,7 +15,7 @@ Colours shown: Polo White (1953 – the only colour that year), blue C5 recolour
 What's your price era? 👇
 
 Photo credits (via Wikimedia Commons, edited: cut-out, background removed):
-• 1953 Chevrolet Corvette front – TTTNIS, CC0 (edited: cut-out, museum sign removed)
+• 1953 Chevrolet Corvette front – TTTNIS, CC0 (edited: cut-out, museum sign removed, windscreen glass restored)
 • Chevrolet Corvette C5 2 – Calreyn88, CC BY-SA 4.0 (edited: cut-out, recoloured to a deeper blue)
 • Chevrolet Corvette C8 IAA 2021 – Alexander Migl, CC BY-SA 4.0 (edited: cut-out)
 Voice & graphics AI-assisted.
@@ -41,6 +41,6 @@ My price era: 1953 – $3,498 for a Corvette 💸 Yours? 👇
 ## Voice-over script
 Hook (0–4 s): Guess what a Corvette cost in nineteen fifty-three.
 2020 (4–8 s): Today? Fifty-nine thousand, nine hundred ninety-five dollars.
-1997 (8–12 s): Thirty-seven thousand, four hundred ninety-five dollars.
+1997 (8–12 s): Ninety-seven? Thirty-seven thousand, four hundred ninety-five dollars.
 1953 (12–16 s): And in fifty-three? Three thousand, four hundred ninety-eight dollars.
 CTA (16–20 s): Seventeen old ones for one new one... what's your price era?
