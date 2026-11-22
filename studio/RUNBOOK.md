@@ -181,7 +181,7 @@ cd $D && git init -q -b deliver && git add -A && git commit -qm "Deliver <Car> <
 
 c) **Archive (user, 2026-11-22):** nothing extra to do – the `deliver` workflow uploads every delivered mp4 with the
    date in front to the GitHub release `videos` (sessions cannot create releases; Actions can). For a re-edited video
-   from a chat: push an orphan branch `archive-in` that contains only the mp4(s) named `<YYYY-MM-DD>_carera_<slug>_<x>.mp4`
+   from a chat: push an orphan branch `archive-in` that contains `.github/workflows/archive.yml` (copy from main) and the mp4(s) named `<YYYY-MM-DD>_carera_<slug>_<x>.mp4`
    → workflow `archive.yml` uploads them. Bundle of the last 14 days: dispatch `bundle.yml` → release `bundle-<date>`.
 
 ## Never
