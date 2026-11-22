@@ -1,20 +1,19 @@
-dir: corvette
-car: Chevrolet Corvette
-File:1953 Chevrolet Corvette front.jpg
-File:Chevrolet Corvette Convertible (C1) '53 (1).jpg
-File:1959 Chevrolet Corvette C1 LC24.jpg
-File:Chevrolet C5 Corvette Convertible (Orange Julep).jpg
-File:Chevrolet Corvette C5, Orillia car show 2026.jpg
-File:Chevrolet Corvette C5 & Chevrolet Corvette C7 convertible, front view, DQ Littleton Car Show 2026-07-12.jpg
-File:04367 Orange Chvrolet Corvette C8 convertible from right front V-P.jpg
-File:Chevrolet Corvette (C8) Washington DC Metro Area, USA (1).jpg
-File:Chevrolet Corvette Stingray (C8) Washington DC Metro Area, USA (1).jpg
-search: 1953 Chevrolet Corvette Polo White front || Corvette;1953,1954,C1 || interior,engine,rear
-search: 1954 Chevrolet Corvette front || Corvette;1953,1954,1955 || interior,engine,rear
-search: 1955 Chevrolet Corvette red front || Corvette;1955,1956,1957,C1 || interior,engine,rear
-search: Chevrolet Corvette C5 coupe red front || Corvette;C5,1997,1998,1999,2000,2001,2002,2003,2004 || interior,engine,rear,C6,C7
-search: Chevrolet Corvette C5 yellow || Corvette;C5,1997,1998,1999,2000,2001,2002,2003,2004 || interior,engine,rear,C6,C7
-search: 1997 Chevrolet Corvette front || Corvette;C5,1997,1998 || interior,engine,rear
-search: Chevrolet Corvette C8 Stingray red front || Corvette;C8,2020,2021,2022,2023,2024,Stingray || interior,engine,rear,C7
-search: Chevrolet Corvette C8 blue front || Corvette;C8,2020,2021,2022,2023,2024 || interior,engine,rear,C7
-search: 2020 Chevrolet Corvette Stingray coupe front || Corvette;C8,2020,2021 || interior,engine,rear,C7
+dir: celica
+car: Toyota Celica
+File:Toyota CELICA LIFTBACK 2000GT (A20) front.jpg
+File:Toyota Celica A20 GTV.jpg
+File:Osaka Auto Messe 2018 (521) - Toyota CELICA LIFTBACK 2000GT (A20) tuned by DIXCEL.jpg
+File:1990 Toyota Celica.jpg
+File:1990 Toyota Celica (T180) - China (49350533272).jpg
+File:Toyota Celica liftback (T180) IMG 4220.jpg
+File:Toyota Celica T230 GT-S (XLS 887) (1).jpg
+File:Toyota Celica T230, Bangladesh. (35606140586).jpg
+File:Toyota Celica T230, Bangladesh. (38900988440).jpg
+search: Toyota Celica A20 red front || Celica;A20,A21,A22,TA22,1970,1971,1972,1973,1974,1975,1976,1977,first || interior,engine,rear,dashboard
+search: Toyota Celica 1971 ST coupe || Celica;A20,A21,A22,TA22,1970,1971,1972,1973,ST || interior,engine,rear,dashboard
+search: Toyota Celica TA22 yellow || Celica;A20,A22,TA22,1971,1972,1973,1974 || interior,engine,rear,dashboard
+search: Toyota Celica T180 red front || Celica;T180,ST182,ST183,ST184,ST185,GT-Four,1990,1991,1992,1993 || interior,engine,rear,rally,dashboard
+search: Toyota Celica GT-Four ST185 front || Celica;ST185,GT-Four,T180 || interior,engine,rear,dashboard
+search: Toyota Celica T230 yellow front || Celica;T230,ZZT230,ZZT231,2000,2001,2002,2003,2004,2005 || interior,engine,rear,dashboard
+search: Toyota Celica T230 red front || Celica;T230,ZZT230,ZZT231,2000,2001,2002,2003,2004,2005,2006 || interior,engine,rear,dashboard
+search: Toyota Celica GT-S 2000 blue || Celica;T230,ZZT231,GT-S,2000,2001,2002,2003 || interior,engine,rear,dashboard
