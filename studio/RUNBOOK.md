@@ -84,9 +84,26 @@ Copy the Land Rover set and adapt: `src/lrcfg.py` → `src/<slug>cfg.py`, `src/a
 - Voice lines in `LINES` (hook, e74, e97, e24, cta) + subtitle `CHUNKS` (style C, as in the template).
   After the mix: `sub/timing.json` → set `cta[-1].t1 = 4.0` (see history in Opel run).
 
-## 5. Video 2 – "Guess the price"
+## 5. Video 2 – "Guess the price 2.0" (NEW FORMAT, user approved 2026-11-22 – replaces the old price video)
 
-Copy `src/price_rr.py` → `src/price_<slug>.py`, `templates/mix_price.py` → `vid/<slug>/mixp.py`.
+The OLD car is the riddle; the answer comes at 13.5 s. **18.0 s**, 5 scenes: `hook` 3.5 s, `h1` 4 s, `h2` 4 s, `cd` 2 s, `rv` 4.5 s.
+Copy `src/price_v2.py` → `src/price2_<slug>.py` and edit only the block at the top (`ERAS` = [oldest, middle, today]
+dicts as in `price_rr.py`, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). Copy `templates/mix_price2.py` →
+`vid/<slug>p/mixp.py`, replace paths and the `LINES`. Make `out/scenes`, `out/prev`, `out/final`.
+- `hook`: oldest car big, "GUESS THE PRICE", year + NAME, pulsing "$ ?,???", "COMMENT YOUR GUESS ↓".
+  Voice: "<Year>. What did this cost new? Comment your guess!"
+- `h1` = "HINT 1: TODAY" (today's price), `h2` = "HINT 2" (middle era price); small old car + "AND <year>?".
+  Voice: "Hint: today it's <full number> dollars." / "<Year>? <full number>."
+- `cd`: "LAST" (white) / "CHANCE!" (red), price tag spinning like a slot machine, drumroll, logo timer grows to the
+  centre. Voice ONLY "Last chance..." (never count "three, two, one" – user found it robotic).
+- `rv`: "<YEAR> PRICE:", price counts up, note line, "N OF THESE = 1 NEW ONE" (N = floor(today/oldest)),
+  "DID YOU GUESS RIGHT? ↓", COMMENT!, pulsing FOLLOW +. Voice: "<full number> dollars! Did you guess right?"
+- **Logo timer** (`src/logotimer.py`, style "A" = spray clock in the profile colours, user's choice) sits top right
+  (930,300, size 210) the whole time, counts down to the reveal; texts stay on the LEFT. Do not move or restyle it.
+- Pinned comment suggestion: "Closest guess gets pinned 📌 No googling! 😅".
+- deliver.json: duration 18 for this video. Output names stay `carera_<slug>_price.mp4` / `_ohne_musik.mp4`.
+
+(Old 20 s format, kept for reference only: `src/price_rr.py` + `templates/mix_price.py`.)
 - Order **expensive → cheap**: today → middle era → oldest (scenes `p3`, `p2`, `p1`).
 - Hook: "GUESS THE PRICE" big from frame 0, zoom-out on the new car with its price tag, old car with "$ ?,???".
 - Prices: official **new list price of the base model in the home market** (DE: DM/€, UK: £, US: $), each from a
@@ -108,6 +125,9 @@ Never mirror a car that shows lettering (badges read backwards).
 trio `trw` ≈ 520–650; price `cw` ≈ 880–1020, hook new car 800 / old car 760, CTA grid cars ≥ 320, CTA new car ≈ 560.
 Check in the preview that nothing is cut off at the edges and the texts stay readable.
 
+**Units (user, 2026-11-21): the channel is English – always HP (not PS), mph / km/h, never German words
+like "PS", "Getriebe", "Liter" on screen or in the voice.**
+
 ## 6. Voice and sound (both videos)
 
 Kokoro `am_adam`, speed **0.97**. Short, natural spoken sentences, unhurried, ≤ ~3.8 s per scene.
@@ -123,7 +143,7 @@ Music a bit louder, SFX quieter (templates already balanced). Mixes: `mix10_am_a
 3. concat (`list.txt`, `-c copy`), then mux each audio with `-c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -shortest`.
    Add `-movflags +faststart` to the mux (Telegram streaming/preview).
    Outputs: `carera_<slug>_eras.mp4`, `carera_<slug>_eras_ohne_musik.mp4`, `carera_<slug>_price.mp4`, `carera_<slug>_price_ohne_musik.mp4`.
-4. ffprobe = 20.0 s; grab 2–3 frames of the final file and look at them.
+4. ffprobe = 20.0 s (price 2.0: 18.0 s); grab 2–3 frames of the final file and look at them.
 
 ## 8. Captions (one markdown file per video, English, ready to paste)
 
