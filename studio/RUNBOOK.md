@@ -101,7 +101,7 @@ dicts as in `price_rr.py`, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). 
 - **Logo timer** (`src/logotimer.py`, style "A" = spray clock in the profile colours, user's choice) sits top right
   (930,300, size 210) the whole time, counts down to the reveal; texts stay on the LEFT. Do not move or restyle it.
 - Pinned comment suggestion: "Closest guess gets pinned 📌 No googling! 😅".
-- deliver.json: duration 18 for this video. Output names stay `carera_<slug>_price.mp4` / `_ohne_musik.mp4`.
+- deliver.json: duration 18 for this video. Output name stays `carera_<slug>_price.mp4`.
 
 (Old 20 s format, kept for reference only: `src/price_rr.py` + `templates/mix_price.py`.)
 - Order **expensive → cheap**: today → middle era → oldest (scenes `p3`, `p2`, `p1`).
@@ -142,7 +142,7 @@ Music a bit louder, SFX quieter (templates already balanced). Mixes: `mix10_am_a
 2. `python3 -I <script> render` (one mp4 per scene in `out/scenes/`).
 3. concat (`list.txt`, `-c copy`), then mux each audio with `-c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -shortest`.
    Add `-movflags +faststart` to the mux (Telegram streaming/preview).
-   Outputs: `carera_<slug>_eras.mp4`, `carera_<slug>_eras_ohne_musik.mp4`, `carera_<slug>_price.mp4`, `carera_<slug>_price_ohne_musik.mp4`.
+   Outputs: ONLY `carera_<slug>_eras.mp4` and `carera_<slug>_price.mp4` (with music). **No `_ohne_musik` versions any more (user, 2026-11-22).**
 4. ffprobe = 20.0 s (price 2.0: 18.0 s); grab 2–3 frames of the final file and look at them.
 
 ## 8. Captions (one markdown file per video, English, ready to paste)
@@ -158,7 +158,7 @@ Remind the user (Farsi) to set the AI label on all three platforms. List sources
 
 ## 9. Delivery
 
-a) Send the 4 videos + captions in this session with SendUserFile, and a short Farsi summary
+a) Send the 2 videos (with music) + captions in this session with SendUserFile, and a short Farsi summary
    (what the car is, which colours/photos, anything to know, captions in code blocks).
 b) Telegram: create an orphan branch `deliver` containing ONLY `deliver.py`, `.github/workflows/deliver.yml`
    (copy from `studio/deliver/`) and `out/` (videos with music + caption .md files + `out/deliver.json`), force-push it:
@@ -178,6 +178,16 @@ cd $D && git init -q -b deliver && git add -A && git commit -qm "Deliver <Car> <
    (use the same git credentials/remote as the clone; end commit messages with the attribution lines of the session).
    Check the Action run (`gh run list --branch deliver -L 1`) succeeded (deliver.py exits 1 if any Telegram call failed).
    An item without `"video"` sends only its texts (useful to resend captions without the videos).
+
+c) **Archive (user, 2026-11-22):** upload both final videos to the GitHub release `videos` with the date in front
+   (the bi-weekly bundle task collects them from there):
+```bash
+cd /home/claude/carera_bot; T=$(date +%F)
+gh release view videos >/dev/null 2>&1 || gh release create videos --title "CarEra video archive" --notes "All finished CarEra videos (with music)."
+cp <eras mp4> /tmp/${T}_carera_<slug>_eras.mp4; cp <price mp4> /tmp/${T}_carera_<slug>_price.mp4
+gh release upload videos /tmp/${T}_carera_<slug>_eras.mp4 /tmp/${T}_carera_<slug>_price.mp4 --clobber
+```
+   If the user later gets a re-edited version in a chat, upload that one too (same date prefix, `_v2` suffix).
 
 ## Never
 - Never write the Telegram token or the user's e-mail into any file, message or log. Secrets stay in GitHub.
