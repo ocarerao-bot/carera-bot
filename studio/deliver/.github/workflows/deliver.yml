@@ -2,6 +2,8 @@ name: deliver videos to telegram
 on:
   push:
     branches: [deliver]
+permissions:
+  contents: write
 jobs:
   send:
     runs-on: ubuntu-latest
@@ -14,3 +16,10 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: archive videos in release "videos"
+        env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}" }
+        run: |
+          gh release view videos >/dev/null 2>&1 || gh release create videos --title "CarEra video archive" --notes "All finished CarEra videos (with music)."
+          T=$(date +%F); mkdir arc
+          for f in out/*.mp4; do cp "$f" "arc/${T}_$(basename "$f")"; done
+          gh release upload videos arc/*.mp4 --clobber

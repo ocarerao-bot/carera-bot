@@ -1,0 +1,20 @@
+name: bundle videos (zip of the last N days)
+on:
+  workflow_dispatch:
+    inputs:
+      days: { description: "how many days back", default: "14" }
+permissions:
+  contents: write
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}", DAYS: "${{ inputs.days }}" }
+        run: |
+          mkdir v && cd v
+          since=$(date -d "-$DAYS days" +%F); today=$(date +%F)
+          for a in $(gh release view videos --json assets --jq '.assets[].name'); do d=${a:0:10}; [[ "$d" > "$since" || "$d" == "$since" ]] && gh release download videos -p "$a"; done
+          ls; zip -0 -q ../carera_videos_${since}_bis_${today}.zip *.mp4
+          cd ..; tag=bundle-$today
+          gh release view $tag >/dev/null 2>&1 || gh release create $tag --title "CarEra Videos $since – $today" --notes "Alle Videos mit Musik der letzten $DAYS Tage."
+          gh release upload $tag carera_videos_${since}_bis_${today}.zip --clobber

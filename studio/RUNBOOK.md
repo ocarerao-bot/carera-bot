@@ -179,15 +179,10 @@ cd $D && git init -q -b deliver && git add -A && git commit -qm "Deliver <Car> <
    Check the Action run (`gh run list --branch deliver -L 1`) succeeded (deliver.py exits 1 if any Telegram call failed).
    An item without `"video"` sends only its texts (useful to resend captions without the videos).
 
-c) **Archive (user, 2026-11-22):** upload both final videos to the GitHub release `videos` with the date in front
-   (the bi-weekly bundle task collects them from there):
-```bash
-cd /home/claude/carera_bot; T=$(date +%F)
-gh release view videos >/dev/null 2>&1 || gh release create videos --title "CarEra video archive" --notes "All finished CarEra videos (with music)."
-cp <eras mp4> /tmp/${T}_carera_<slug>_eras.mp4; cp <price mp4> /tmp/${T}_carera_<slug>_price.mp4
-gh release upload videos /tmp/${T}_carera_<slug>_eras.mp4 /tmp/${T}_carera_<slug>_price.mp4 --clobber
-```
-   If the user later gets a re-edited version in a chat, upload that one too (same date prefix, `_v2` suffix).
+c) **Archive (user, 2026-11-22):** nothing extra to do – the `deliver` workflow uploads every delivered mp4 with the
+   date in front to the GitHub release `videos` (sessions cannot create releases; Actions can). For a re-edited video
+   from a chat: push an orphan branch `archive-in` that contains only the mp4(s) named `<YYYY-MM-DD>_carera_<slug>_<x>.mp4`
+   → workflow `archive.yml` uploads them. Bundle of the last 14 days: dispatch `bundle.yml` → release `bundle-<date>`.
 
 ## Never
 - Never write the Telegram token or the user's e-mail into any file, message or log. Secrets stay in GitHub.

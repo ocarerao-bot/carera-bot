@@ -1,0 +1,17 @@
+name: archive videos into release
+on:
+  push:
+    branches: [archive-in]
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: archive-in }
+      - env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}" }
+        run: |
+          gh release view videos >/dev/null 2>&1 || gh release create videos --title "CarEra video archive" --notes "All finished CarEra videos (with music)."
+          gh release upload videos *.mp4 --clobber
+          gh release view videos --json assets --jq '.assets|length'
