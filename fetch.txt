@@ -1,19 +1,18 @@
-dir: celica
-car: Toyota Celica
-File:Toyota CELICA LIFTBACK 2000GT (A20) front.jpg
-File:Toyota Celica A20 GTV.jpg
-File:Osaka Auto Messe 2018 (521) - Toyota CELICA LIFTBACK 2000GT (A20) tuned by DIXCEL.jpg
-File:1990 Toyota Celica.jpg
-File:1990 Toyota Celica (T180) - China (49350533272).jpg
-File:Toyota Celica liftback (T180) IMG 4220.jpg
-File:Toyota Celica T230 GT-S (XLS 887) (1).jpg
-File:Toyota Celica T230, Bangladesh. (35606140586).jpg
-File:Toyota Celica T230, Bangladesh. (38900988440).jpg
-search: Toyota Celica A20 red front || Celica;A20,A21,A22,TA22,1970,1971,1972,1973,1974,1975,1976,1977,first || interior,engine,rear,dashboard
-search: Toyota Celica 1971 ST coupe || Celica;A20,A21,A22,TA22,1970,1971,1972,1973,ST || interior,engine,rear,dashboard
-search: Toyota Celica TA22 yellow || Celica;A20,A22,TA22,1971,1972,1973,1974 || interior,engine,rear,dashboard
-search: Toyota Celica T180 red front || Celica;T180,ST182,ST183,ST184,ST185,GT-Four,1990,1991,1992,1993 || interior,engine,rear,rally,dashboard
-search: Toyota Celica GT-Four ST185 front || Celica;ST185,GT-Four,T180 || interior,engine,rear,dashboard
-search: Toyota Celica T230 yellow front || Celica;T230,ZZT230,ZZT231,2000,2001,2002,2003,2004,2005 || interior,engine,rear,dashboard
-search: Toyota Celica T230 red front || Celica;T230,ZZT230,ZZT231,2000,2001,2002,2003,2004,2005,2006 || interior,engine,rear,dashboard
-search: Toyota Celica GT-S 2000 blue || Celica;T230,ZZT231,GT-S,2000,2001,2002,2003 || interior,engine,rear,dashboard
+dir: mazda3
+car: Mazda 3
+File:1984 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-12-17) 01.jpg
+File:1985 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-06-07).jpg
+File:Mazda Familia (BD) (front three-quarter view) at Mazda Museum.jpg
+File:2006 Mazda3 (BK Series 2) SP23 sedan (2006-10-13) 02.jpg
+File:2006 Mazda3 (BK Series 2) SP23 sedan (2006-10-13) 04.jpg
+File:2006-2008 Mazda 3 (BK Series 2) SP23 sedan 01.jpg
+File:Mazda3 (BP) X e-Skyactiv-X IMG 9015.jpg
+File:Mazda3 Fastback 1.5 Elite 2020 (1).jpg
+File:Mazda3 Hatchback (BP) Washington DC Metro Area, USA (1).jpg
+search: Mazda 323 BD red || 323,Familia;BD,1980,1981,1982,1983,1984,1985 || interior,engine,rear,dashboard,rally
+search: Mazda Familia BD 1980 hatchback || Familia,323;BD,1980,1981,1982,1983 || interior,engine,rear,dashboard
+search: Mazda 323 1981 hatchback front || 323;BD,1980,1981,1982,1983,1984,1985 || interior,engine,rear,dashboard,rally
+search: Mazda3 BK hatchback red front || Mazda3,Mazda 3;BK,2003,2004,2005,2006,2007,2008 || interior,engine,rear,dashboard
+search: Mazda3 BK blue || Mazda3,Mazda 3;BK,2003,2004,2005,2006,2007,2008 || interior,engine,rear,dashboard
+search: Mazda3 BP Soul Red || Mazda3,Mazda 3;BP,2019,2020,2021,2022,2023,2024 || interior,engine,rear,dashboard
+search: Mazda3 hatchback 2019 front || Mazda3,Mazda 3;BP,2019,2020,2021,2022,2023 || interior,engine,rear,dashboard
