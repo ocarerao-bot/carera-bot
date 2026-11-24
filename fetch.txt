@@ -1,18 +1,15 @@
-dir: mazda3
-car: Mazda 3
-File:1984 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-12-17) 01.jpg
-File:1985 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-06-07).jpg
-File:Mazda Familia (BD) (front three-quarter view) at Mazda Museum.jpg
-File:2006 Mazda3 (BK Series 2) SP23 sedan (2006-10-13) 02.jpg
-File:2006 Mazda3 (BK Series 2) SP23 sedan (2006-10-13) 04.jpg
-File:2006-2008 Mazda 3 (BK Series 2) SP23 sedan 01.jpg
-File:Mazda3 (BP) X e-Skyactiv-X IMG 9015.jpg
-File:Mazda3 Fastback 1.5 Elite 2020 (1).jpg
-File:Mazda3 Hatchback (BP) Washington DC Metro Area, USA (1).jpg
-search: Mazda 323 BD red || 323,Familia;BD,1980,1981,1982,1983,1984,1985 || interior,engine,rear,dashboard,rally
-search: Mazda Familia BD 1980 hatchback || Familia,323;BD,1980,1981,1982,1983 || interior,engine,rear,dashboard
-search: Mazda 323 1981 hatchback front || 323;BD,1980,1981,1982,1983,1984,1985 || interior,engine,rear,dashboard,rally
-search: Mazda3 BK hatchback red front || Mazda3,Mazda 3;BK,2003,2004,2005,2006,2007,2008 || interior,engine,rear,dashboard
-search: Mazda3 BK blue || Mazda3,Mazda 3;BK,2003,2004,2005,2006,2007,2008 || interior,engine,rear,dashboard
-search: Mazda3 BP Soul Red || Mazda3,Mazda 3;BP,2019,2020,2021,2022,2023,2024 || interior,engine,rear,dashboard
-search: Mazda3 hatchback 2019 front || Mazda3,Mazda 3;BP,2019,2020,2021,2022,2023 || interior,engine,rear,dashboard
+dir: audi
+File:1974 Audi 80 LS.jpg
+File:Audi 80 LS, Bj. 1973 (2016-05-01).JPG
+File:Orange Audi 80 B1 (front).JPG
+File:Audi A4 B5 Avant front 20080121.jpg
+File:Audi A4 B5 Avant front 20080517.jpg
+File:Audi A4 sedan 1.8T quattro (B5) front.JPG
+File:Audi A4 S line Package (B9) front.JPG
+File:2023 Audi A4 B9 Avant Allroad - front exterior view.jpg
+search: Audi 80 B1 || Audi 80;B1,1972,1973,1974,1975,1976 || interior,engine,rear,Motor,Innenraum,Heck
+search: Audi 80 B1 side || Audi 80;side,Seitenansicht,profile || interior,engine
+search: Audi A4 B5 sedan || A4;B5 || interior,engine,rear,Avant,Heck,Innenraum
+search: Audi A4 B5 side || A4;B5;side,Seitenansicht,profile || interior,engine
+search: Audi A4 B9 sedan || A4;B9 || interior,engine,rear,Avant,allroad,Heck,Innenraum
+search: Audi A4 B9 side || A4;B9;side,Seitenansicht,profile || interior,engine
