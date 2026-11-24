@@ -1,15 +1,8 @@
-dir: audi
-File:1974 Audi 80 LS.jpg
-File:Audi 80 LS, Bj. 1973 (2016-05-01).JPG
-File:Orange Audi 80 B1 (front).JPG
-File:Audi A4 B5 Avant front 20080121.jpg
-File:Audi A4 B5 Avant front 20080517.jpg
-File:Audi A4 sedan 1.8T quattro (B5) front.JPG
-File:Audi A4 S line Package (B9) front.JPG
-File:2023 Audi A4 B9 Avant Allroad - front exterior view.jpg
-search: Audi 80 B1 || Audi 80;B1,1972,1973,1974,1975,1976 || interior,engine,rear,Motor,Innenraum,Heck
-search: Audi 80 B1 side || Audi 80;side,Seitenansicht,profile || interior,engine
-search: Audi A4 B5 sedan || A4;B5 || interior,engine,rear,Avant,Heck,Innenraum
-search: Audi A4 B5 side || A4;B5;side,Seitenansicht,profile || interior,engine
-search: Audi A4 B9 sedan || A4;B9 || interior,engine,rear,Avant,allroad,Heck,Innenraum
-search: Audi A4 B9 side || A4;B9;side,Seitenansicht,profile || interior,engine
+dir: audi2
+search: Audi A4 B9 blue || A4;B9;blue,Blau,Navarra,Scuba || interior,engine,Innenraum
+search: Audi A4 B9 green || A4;B9;green,Grün,Goodwood,District || interior,engine,Innenraum
+search: Audi A4 B9 side view || A4;B9;side,Seitenansicht,Seite,profile,left,right || interior,engine,Innenraum
+search: Audi A4 B5 side view || A4;B5;side,Seitenansicht,Seite,profile,left,right || interior,engine,Innenraum,Avant
+search: Audi A4 B5 green || A4;B5;green,Grün,blue,Blau,yellow,Gelb || interior,engine,Innenraum
+search: Audi A4 limousine 2016 || A4;2015,2016,2017,2018,B9 || interior,engine,Innenraum,Avant
+search: Audi 80 1974 || Audi 80;1972,1973,1974,1975,1976,1977,B1 || interior,engine,Innenraum,B2,B3,B4
