@@ -1,7 +1,7 @@
 # CarEra daily studio – runbook
 
 Read this whole file before starting. It is the brief for the daily automatic run
-(scheduled 08:30 Europe/Berlin). The user is Rashid («رشید», CarEra channel: TikTok, Instagram,
+(scheduled 07:15 Europe/Berlin). The user is Rashid («رشید», CarEra channel: TikTok, Instagram,
 YouTube Shorts). **Talk to him in Farsi (Persian).** The videos themselves are in **English**.
 
 Goal of every run: from the bot's *car of the day* make **two finished videos**
@@ -36,7 +36,11 @@ All scripts use absolute paths under `/home/claude/vid/`. Per car, work in `/hom
 
 ## 1. Car of the day
 
-The bot (GitHub Action `daily.yml`, 06:17 UTC) already posted today's photo kit to Telegram.
+**First thing (user, 2026-11-25): post today's photo kit yourself** – the task starts at 07:15 Berlin and the user wants
+the photos at 07:15 and video work from ~07:30. Dispatch the bot (its own cron is only a late backup and skips if
+already posted today):
+`gh api -X POST repos/ocarerao-bot/carera-bot/actions/workflows/daily.yml/dispatches -f ref=main`
+then poll `git pull` until the "daily photos <date>" commit is there (~1–2 min) and start working right away.
 ```bash
 cd /home/claude/carera_bot && git pull
 python3 -c "import json;c=json.load(open('cars.json'));s=json.load(open('state.json'));x=c[(s['next']-1)%len(c)];print(x['car'],x['eras'])"

@@ -90,6 +90,8 @@ def run(state_path=os.path.join(HERE, "state.json")):
     cars = json.load(open(os.path.join(HERE, "cars.json")))
     st = load_state(state_path); used = set(st["used"]); per = int(os.getenv("PHOTOS_PER_ERA", "3"))
     chat = os.getenv("TELEGRAM_CHAT_ID", "dry")
+    if st.get("last") == datetime.date.today().isoformat() and os.getenv("GITHUB_EVENT_NAME") == "schedule":
+        print("already posted today (by the 07:15 dispatch) – backup schedule skips"); return
     car = cars[st["next"] % len(cars)]
     today = datetime.date.today().isoformat()
     tg("sendMessage", chat_id=chat, parse_mode="HTML",
@@ -122,7 +124,7 @@ def run(state_path=os.path.join(HERE, "state.json")):
            text="Credits (copy into the post, mark edits!):\n" + "\n".join(lines) +
                 "\n\nTip: download the ORIGINAL from the Commons page for full resolution.")
     post_prices(car, chat)
-    st["next"] += 1; st["used"] = sorted(used)
+    st["next"] += 1; st["used"] = sorted(used); st["last"] = datetime.date.today().isoformat()
     json.dump(st, open(state_path, "w"), indent=1, ensure_ascii=False)
 
 if __name__ == "__main__":
