@@ -10,9 +10,18 @@ Goal of every run: from the bot's *car of the day* make **two finished videos**
 1. **"One car. Three eras."** (tech/unique facts per generation)
 2. **"Guess the price"** (new-car list prices then vs now)
 
-If the prices for all three eras cannot be verified from real sources, do NOT invent them:
-make "How much bigger did it get?" instead (only if usable side/3-4 photos exist), otherwise
-deliver only video 1 and say why.
+**Always make exactly these two formats (user, 2026-11-25). Never switch to "How much bigger did it get?" or any
+other format.** If a price is hard to find, research harder (period brochures/price lists, period road tests,
+de/fr/it/ja Wikipedia, ADAC/Autobild/classic price guides, archive.org). If one era really has no verifiable price,
+pick another generation of the same model that has one. Never invent prices.
+
+**Rules from the user's feedback (2026-11-25) – check them before rendering:**
+- **Say the car's name out loud.** Both videos: the hook voice names make + model ("The Mazda 323...",
+  "Toyota Celica..."), and when a generation has a different model name, the voice says it in that scene
+  ("...today it's called the Mazda 3"). The name must also be on screen. A whole video without the name is a failure.
+- **Facts must be strong.** Each era fact must be surprising or story-worthy: a first, a record, motorsport wins,
+  famous film/owner, a clever engineering idea, a shocking number. Never trivial facts such as "10 cm longer",
+  "a bit wider", "more airbags", "new headlights". If the only difference you find is size, research more.
 
 ---
 
@@ -78,7 +87,8 @@ Copy the Land Rover set and adapt: `src/lrcfg.py` → `src/<slug>cfg.py`, `src/a
 `src/anim7ls.py` → `src/anim7<x>s.py`, `templates/mix_eras.py` → `vid/<slug>/mix.py`. Replace every path/name.
 - Per era: `year`, `car` (cut-out png), `carw` (~860–1000; oldtimer slightly smaller), `strip` (era label),
   `w1` (big word), `w2` (handwritten line), `s1`/`s2` (two short stat discs, ≤5 chars each line).
-- Content: one **real technical/unique fact per generation** (verify with sources). **No prices. No "1/2/3" numbering.**
+- Content: one **real, strong technical/unique fact per generation** (verify with sources; see "Rules from the user's
+  feedback" at the top – never trivial size facts). **No prices. No "1/2/3" numbering.** Hook voice says make + model.
 - Hook label (short teaser). CTA is FIXED (user's choice, 2026-11-16): big text **"WHICH ERA" / "IS YOUR ERA?"**,
   subtitle "WHICH ERA IS / YOUR ERA? ↓", voice e.g. "So... which era is your era?". Do not use "be honest" / debate lines.
 - Voice lines in `LINES` (hook, e74, e97, e24, cta) + subtitle `CHUNKS` (style C, as in the template).
@@ -91,9 +101,10 @@ Copy `src/price_v2.py` → `src/price2_<slug>.py` and edit only the block at the
 dicts as in `price_rr.py`, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). Copy `templates/mix_price2.py` →
 `vid/<slug>p/mixp.py`, replace paths and the `LINES`. Make `out/scenes`, `out/prev`, `out/final`.
 - `hook`: oldest car big, "GUESS THE PRICE", year + NAME, pulsing "$ ?,???", "COMMENT YOUR GUESS ↓".
-  Voice: "<Year>. What did this cost new? Comment your guess!"
+  Voice: "<Year>. The <Make Model>. What did this cost new?" (name is mandatory; add "Comment your guess!" if it fits).
 - `h1` = "HINT 1: TODAY" (today's price), `h2` = "HINT 2" (middle era price); small old car + "AND <year>?".
-  Voice: "Hint: today it's <full number> dollars." / "<Year>? <full number>."
+  Voice: "Hint: today's <Model> is <full number> dollars." / "<Year>, the <Model>? <full number>." (say the model
+  name, especially when it changed, e.g. "today's Mazda 3").
 - `cd`: "LAST" (white) / "CHANCE!" (red), price tag spinning like a slot machine, drumroll, logo timer grows to the
   centre. Voice ONLY "Last chance..." (never count "three, two, one" – user found it robotic).
 - `rv`: "<YEAR> PRICE:", price counts up, note line, "N OF THESE = 1 NEW ONE" (N = floor(today/oldest)),
