@@ -1138,11 +1138,18 @@
     ]
    ],
    [
-    "1994",
-    "Range Rover P38",
+    "2000",
+    "Range Rover P38 4.6 HSE",
     [
      [
       "P38"
+     ],
+     [
+      "HSE",
+      "4.6",
+      "2000",
+      "2001",
+      "2002"
      ]
     ]
    ],
@@ -1156,7 +1163,7 @@
     ]
    ]
   ],
-  "note": "User promised this car to followers (2026-11-26). Price video was made by hand on 2026-11-14: use NEW photos/colours, both formats, strong facts. The middle era MUST be the P38 (1994–2002, second generation) – the user insists. Use a front three-quarter P38 photo if one exists (last time only a side view was available); bold colour, e.g. Epsom Green or Oxford Blue."
+  "note": "User promised this car to followers (2026-11-26). Price video was made by hand on 2026-11-14: use NEW photos/colours, both formats, strong facts. The middle era MUST be the P38 **4.6 HSE from the 2000s (2000–2002)** – the user insists; show year 2000 and say 'HSE'. Use a front three-quarter P38 HSE photo if one exists; bold period colour (e.g. Epsom Green, Oxford Blue, Java Black is too dark)."
  },
  {
   "car": "BMW M5",
