@@ -1,5 +1,5 @@
 {
- "next": 24,
+ "next": 25,
  "used": [
   "File:'04-'06 Jeep Wrangler TJ Convertible (Orange Julep).jpg",
   "File:-01 ITALY Fiat Panda 1980 ( 141) in snow in Milan.JPG",
@@ -30,6 +30,7 @@
   "File:1984 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-12-17) 01.jpg",
   "File:1984 Toyota Celica Supra 2.8i.jpg",
   "File:1985 Mazda 323 (BD Series 2) Deluxe 5-door hatchback (2010-06-07).jpg",
+  "File:1986 Range Rover Classic 3.5 V8 (40154381300).jpg",
   "File:1990 Mercedes-Benz W460 300 GD, front left, Motul Trans Sport Show 2024, 05-25-2024.jpg",
   "File:1990 Toyota Celica (T180) - China (49350533272).jpg",
   "File:1990 Toyota Celica.jpg",
@@ -43,8 +44,11 @@
   "File:1997 Mazda MX-5 NA softtop convertible in Montego Blue Mica, front right.jpg",
   "File:1998 Honda Civic EJ-EK (cropped).jpg",
   "File:1998 Mazda MX-5 NA softop convertible (1).jpg",
+  "File:1998 Range Rover P38 4.6 HSE (26749120504).jpg",
   "File:1998 Range Rover P38 4.6 HSE (26749125834).jpg",
+  "File:1998 Range Rover P38 4.6 HSE (26750202953).jpg",
   "File:1998 Range Rover P38 4.6 HSE (27081004370).jpg",
+  "File:1998 Range Rover P38 4.6 HSE (27081005220).jpg",
   "File:1998-1999 Honda Civic (EK) 1.8 Si Sedan (19-08-2017) 02.jpg",
   "File:1999 Volkswagen New Beetle GLS, front left, 06-13-2023.jpg",
   "File:2001 Mazda MX-5 S (NB) - 1.8 (140PS) petrol manual - 2025-05-05, front right.jpg",
@@ -112,7 +116,9 @@
   "File:Land Rover Defender 110 V8 (L663) Washington DC Metro Area, USA.jpg",
   "File:Land Rover Defender 110 XS TD DC 2015 - front.jpg",
   "File:Land Rover Defender 110, front and side view combined.jpg",
+  "File:Land Rover Range Rover (L460) (front three-quarter view) at Grand Green Osaka.jpg",
   "File:Land Rover Range Rover Autobiography L460 Deep Garnet (1).jpg",
+  "File:Land Rover Range Rover L460 Fuji White (1).jpg",
   "File:Land Rover Range Rover LWB Autobiography L460 Santorini Black (1).jpg",
   "File:MINI J01 Cooper SE Favoured Blazing Blue (1).jpg",
   "File:MINI J01 Cooper SE Favoured Vescin Beige (1).jpg",
@@ -149,6 +155,8 @@
   "File:Morris Mini Cooper.jpg",
   "File:Morris Mini Minor à Genève 2019-03-05 (1).jpg",
   "File:Morris Mini Traveller (23110314583).jpg",
+  "File:Moscow car show 2026-08-01 Range Rover Classic 03.jpg",
+  "File:Moscow car show 2026-08-01 Range Rover Classic 13.jpg",
   "File:Nationale oldtimerdag Zandvoort 2010, 1972 PORSCHE 911 T, DR-94-25 pic1.JPG",
   "File:Nissan GT-R R35 2018 (1).jpg",
   "File:Nissan GT-R T-spec (R35), 2021, left-front.jpg",
@@ -178,6 +186,7 @@
   "File:Range Rover (L460) Washington DC Metro Area, USA (1).jpg",
   "File:Range Rover Classic 2-Door at Legendy 2018 in Prague.jpg",
   "File:Range Rover Classic 2-door in Astral Silver, front left.jpg",
+  "File:Range Rover L460 HSE Belgravia Green Metallic - front.jpg",
   "File:Red and white Volkswagen Type 2 (T1) bus - front view - annual 'Busjesdag' vintage VAG gathering at the Rijtuigenloods, Amersfoort, Netherlands.jpg",
   "File:Renault 5 E-Tech 162931.jpg",
   "File:Renault 5 E-Tech Electric DSC 7169.jpg",
@@ -216,5 +225,6 @@
   "File:Volkswagen T4 Transporter homemade camper in Israel.jpg",
   "File:Willys-Overland CJ-2A.jpg",
   "File:Würgauer Bergrennen Porsche 911-20220911-RM-115032.jpg"
- ]
+ ],
+ "last": "2026-11-26"
 }
