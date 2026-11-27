@@ -22,6 +22,20 @@ pick another generation of the same model that has one. Never invent prices.
   (e.g. "Guess how much the Range Rover cost in nineteen seventy!"), then go on with the hints as usual.
 - The user called the Mazda 3 and BMW 3 Series videos "excellent" – keep that quality and tone as the reference.
 
+**Look & layout rules (user, 2026-11-27 – the corrected BMW M5 videos are the visual reference, "عالی شد"):**
+- **White sticker frame must be complete around EVERY car** – roof, nose, tail and wheels included, in the single-era
+  scenes AND in both collages (hook + CTA). `panels.sticker()` now pads the cut-out before drawing the outline (the old
+  version clipped it wherever the car touched its cropped image edge – that was the M5 roof bug). Never draw a sticker
+  without padding. In every preview, zoom into the collage frames and check the roof line of all three cars.
+- **No dark cars.** If a photo looks dark/underexposed (or the paint is black/navy), pick a brighter photo or recolour
+  to a bright factory colour (see `templates/prep_example_m5_black.py` for black paint: tint glass, mask out the front
+  light/grille band and wheels with polygons, map paint luminance onto the new colour and keep reflections).
+- **CTA collage layout:** FOLLOW + sticker at (860,1468), CTA subtitle at y=1640 (as in `anim7ks.py`) so the "2024"
+  year tag and the cars are never covered.
+- **Photos the user sends in chat** replace the Commons photo for that era. Clean them like any other (people/reflections
+  of people, number plates or show plates removed, glass tinted). Credit line: "photo supplied by CarEra" unless the
+  user names the photographer.
+
 **Rules from the user's feedback (2026-11-25) – check them before rendering:**
 - **Say the car's name out loud.** Both videos: the hook voice names make + model ("The Mazda 323...",
   "Toyota Celica..."), and when a generation has a different model name, the voice says it in that scene
@@ -75,7 +89,9 @@ Make a contact sheet and LOOK at it. Choose per era one photo:
 
 `rembg` (u2net) → `largest()` → fix remnants. Helpers live in `src/r5prep.py` (everything above `# 1972`):
 `largest`, `fill` (plate removal with sampled colour + shading), `glass` (dark tinted glass).
-Worked examples: `studio/templates/prep_example_*.py`.
+Worked examples: `studio/templates/prep_example_*.py` (newest: `prep_example_m5_black.py` = clean-up + black→colour
+recolour, `prep_example_m5_plates.py` = plate removal with inpaint / flat fill and alpha hardening).
+Coordinates: the grid crops label ABSOLUTE pixel positions – read the labels, not the position inside the crop.
 - **Remove every number plate** (fill with bumper/body colour; a blank black plate is OK for old cars).
 - Use grid crops (lines every 50/100 px) to find exact coordinates; then check the result visually.
 - Mirror (`ImageOps.mirror`) so that cars face sensible directions.
@@ -94,8 +110,11 @@ Recolour must not tint glass, lights, tyres or bumpers – exclude them with pol
 
 ## 4. Video 1 – "One car. Three eras."
 
-Copy the Land Rover set and adapt: `src/lrcfg.py` → `src/<slug>cfg.py`, `src/anim7l.py` → `src/anim7<x>.py`,
-`src/anim7ls.py` → `src/anim7<x>s.py`, `templates/mix_eras.py` → `vid/<slug>/mix.py`. Replace every path/name.
+**Reference template = the BMW M5 set (user, 2026-11-27: "the M5 video is the template from now on").**
+Copy and adapt: `src/m5cfg.py` → `src/<slug>cfg.py`, `src/anim7k.py` → `src/anim7<x>.py`,
+`src/anim7ks.py` → `src/anim7<x>s.py`, `templates/mix_eras_m5.py` → `vid/<slug>/mix.py`. Replace every path/name
+(`/vid/m5/`, `m5cfg`, `anim7k`, the hook label "THE BMW M5", LINES/CHUNKS). The M5 mix already sets `cta[-1].t1 = 4.0`.
+(The older Land Rover set `lrcfg.py` / `anim7l.py` / `anim7ls.py` / `mix_eras.py` is kept only for reference.)
 - Per era: `year`, `car` (cut-out png), `carw` (~860–1000; oldtimer slightly smaller), `strip` (era label),
   `w1` (big word), `w2` (handwritten line), `s1`/`s2` (two short stat discs, ≤5 chars each line).
 - Content: one **real, strong technical/unique fact per generation** (verify with sources; see "Rules from the user's
@@ -108,8 +127,8 @@ Copy the Land Rover set and adapt: `src/lrcfg.py` → `src/<slug>cfg.py`, `src/a
 ## 5. Video 2 – "Guess the price 2.0" (NEW FORMAT, user approved 2026-11-22 – replaces the old price video)
 
 The OLD car is the riddle; the answer comes at 13.5 s. **18.0 s**, 5 scenes: `hook` 3.5 s, `h1` 4 s, `h2` 4 s, `cd` 2 s, `rv` 4.5 s.
-Copy `src/price_v2.py` → `src/price2_<slug>.py` and edit only the block at the top (`ERAS` = [oldest, middle, today]
-dicts as in `price_rr.py`, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). Copy `templates/mix_price2.py` →
+**Reference template = `src/price2_m5.py`** (user, 2026-11-27): copy it → `src/price2_<slug>.py` and edit only the block
+at the top (`MP`, `ERAS` = [oldest, middle, today] with year/car/cw/cy/price/note, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). Copy `templates/mix_price2.py` →
 `vid/<slug>p/mixp.py`, replace paths and the `LINES`. Make `out/scenes`, `out/prev`, `out/final`.
 - `hook`: oldest car big, "GUESS THE PRICE", year + NAME, pulsing "$ ?,???", "COMMENT YOUR GUESS ↓".
   Voice (fixed opening): "Guess how much the <Make Model> cost in <year>!" (add "Comment your guess!" if it fits).

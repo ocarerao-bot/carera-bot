@@ -116,3 +116,13 @@ if __name__=="__main__":
     build(PH+"golf_mk4_cut.png","1997","THE NINETIES","1997. CDs and Tamagotchis.","Now premium: airbags, galvanized body, turbo diesels.","AIRBAGS","TURBO\nDIESEL","90",O+"panel_1997.png",plate=[(344,1074),(716,1106),(716,1206),(350,1180)],carw=980,grain=5,seed=5)
     build(PH+"golf_mk8_cut.png","2024","TODAY","Today: digital cockpit, mild-hybrid power,","and it can help steer on the highway.","MILD-\nHYBRID","DIGITAL\nCOCKPIT","24",O+"panel_2024.png",plate=[(256,860),(576,880),(576,968),(260,948)],carw=990,grain=0,seed=7)
     print("ok")
+
+# --- fix (user, 2026-11-27): pad before drawing the white sticker outline, otherwise it is clipped
+# where the car touches the edge of its cropped image (roof, wheels, nose). Applies to every video.
+_sticker_orig=sticker
+def sticker(img, border=16):
+    pad=border+6; big=Image.new("RGBA",(img.width+2*pad,img.height+2*pad),(0,0,0,0)); big.alpha_composite(img.convert("RGBA"),(pad,pad))
+    a=big.getchannel("A").point(lambda v:255 if v>110 else 0)
+    ring=a.filter(ImageFilter.MaxFilter(border*2+1)).filter(ImageFilter.GaussianBlur(2)).point(lambda v:255 if v>80 else 0)
+    out=Image.new("RGBA",big.size,(0,0,0,0)); out.paste(Image.new("RGBA",big.size,(255,255,255,255)),(0,0),ring); out.alpha_composite(big)
+    return out
