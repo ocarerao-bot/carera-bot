@@ -1,11 +1,19 @@
-dir: rr26
-File:1986 Range Rover Classic 3.5 V8 (40154381300).jpg
-File:1998 Range Rover P38 4.6 HSE (26749120504).jpg
-File:1998 Range Rover P38 4.6 HSE (26750202953).jpg
-File:Moscow car show 2026-08-01 Range Rover Classic 03.jpg
-File:Moscow car show 2026-08-01 Range Rover Classic 13.jpg
-File:Range Rover L460 HSE Belgravia Green Metallic - front.jpg
-search: Range Rover Classic 1970 red || Range Rover;1970,1971,1972,1973,1974,1975,Classic,two-door,2-door;red,Masai,orange || interior,engine,Innenraum,Sport,Evoque,Velar
-search: Range Rover Classic Tuscan Blue || Range Rover;Classic,two-door,2-door,1970,1971,1972,1973;blue,Tuscan || interior,engine,Innenraum,Sport,Evoque,Velar
-search: Range Rover Classic Bahama Gold || Range Rover;Classic,two-door,2-door,1970,1971,1972;gold,Bahama,yellow,Sahara,Lincoln,green || interior,engine,Innenraum,Sport,Evoque,Velar
-search: Range Rover P38 green || Range Rover;P38,1995,1996,1997,1998,1999,2000,2001,2002;green,Epsom,Rioja,red,blue,Oxford || interior,engine,Innenraum,Sport,Evoque,Velar
+dir: m5
+File:1985 BMW M5.jpg
+File:BMW E28 M5 drifting 2.JPG
+File:BMW G90 M5 Brooklyn Grey Metallic (1).jpg
+File:BMW G90 M5 First Edition Frozen Deep Grey (1).jpg
+File:BMW M5 (G90) MYLE Festival 2025 DSC 9764.jpg
+File:BMW M5 E28 in BMW-Museum in Munich, Bayern.JPG
+File:BMW M5 E39 (5805301587).jpg
+File:BMW M5 E39 (7298578524).jpg
+File:BMW M5 E39.jpg
+search: BMW M5 E28 red || M5;E28,1985,1986,1987,1988;red,rot,Zinnoberrot || interior,engine,Innenraum,E34,E39,E60,M535i
+search: BMW M5 E28 blue || M5;E28,1985,1986,1987,1988;blue,blau || interior,engine,Innenraum,E34,E39,E60,M535i
+search: BMW M5 E28 || M5;E28 || interior,engine,Innenraum,E34,E39,E60,rear,Heck
+search: BMW M5 E39 Imola red || M5;E39;red,Imola,rot || interior,engine,Innenraum,E28,E34,E60,rear,Heck
+search: BMW M5 E39 blue || M5;E39;blue,Avus,Le Mans,Laguna,blau || interior,engine,Innenraum,E28,E34,E60,rear,Heck
+search: BMW M5 E39 green || M5;E39;green,grün,Techno,violet,Fern || interior,engine,Innenraum,E28,E34,E60,rear,Heck
+search: BMW M5 G90 green || M5;G90,2024,2025;green,Isle of Man,grün || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
+search: BMW M5 G90 blue || M5;G90,2024,2025;blue,Marina Bay,blau || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
+search: BMW M5 G90 red || M5;G90,2024,2025;red,Fire,rot || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
