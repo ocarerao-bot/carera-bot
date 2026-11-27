@@ -15,6 +15,13 @@ other format.** If a price is hard to find, research harder (period brochures/pr
 de/fr/it/ja Wikipedia, ADAC/Autobild/classic price guides, archive.org). If one era really has no verifiable price,
 pick another generation of the same model that has one. Never invent prices.
 
+**Fixed voice openings (user, 2026-11-27) – ALWAYS, no exceptions:**
+- "One car. Three eras." video: the very first words of the voice are **"One car. Three eras."**, then the make + model
+  (e.g. "One car. Three eras. The Range Rover...").
+- "Guess the price" video: the very first words are **"Guess how much the <Make Model> cost in <19xx>!"**
+  (e.g. "Guess how much the Range Rover cost in nineteen seventy!"), then go on with the hints as usual.
+- The user called the Mazda 3 and BMW 3 Series videos "excellent" – keep that quality and tone as the reference.
+
 **Rules from the user's feedback (2026-11-25) – check them before rendering:**
 - **Say the car's name out loud.** Both videos: the hook voice names make + model ("The Mazda 323...",
   "Toyota Celica..."), and when a generation has a different model name, the voice says it in that scene
@@ -105,7 +112,7 @@ Copy `src/price_v2.py` → `src/price2_<slug>.py` and edit only the block at the
 dicts as in `price_rr.py`, `NAME`, `OUTDIR` = `/home/claude/vid/<slug>p/out/`). Copy `templates/mix_price2.py` →
 `vid/<slug>p/mixp.py`, replace paths and the `LINES`. Make `out/scenes`, `out/prev`, `out/final`.
 - `hook`: oldest car big, "GUESS THE PRICE", year + NAME, pulsing "$ ?,???", "COMMENT YOUR GUESS ↓".
-  Voice: "<Year>. The <Make Model>. What did this cost new?" (name is mandatory; add "Comment your guess!" if it fits).
+  Voice (fixed opening): "Guess how much the <Make Model> cost in <year>!" (add "Comment your guess!" if it fits).
 - `h1` = "HINT 1: TODAY" (today's price), `h2` = "HINT 2" (middle era price); small old car + "AND <year>?".
   Voice: "Hint: today's <Model> is <full number> dollars." / "<Year>, the <Model>? <full number>." (say the model
   name, especially when it changed, e.g. "today's Mazda 3").
