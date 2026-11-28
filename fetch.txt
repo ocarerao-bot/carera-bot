@@ -1,19 +1,16 @@
-dir: m5
-File:1985 BMW M5.jpg
-File:BMW E28 M5 drifting 2.JPG
-File:BMW G90 M5 Brooklyn Grey Metallic (1).jpg
-File:BMW G90 M5 First Edition Frozen Deep Grey (1).jpg
-File:BMW M5 (G90) MYLE Festival 2025 DSC 9764.jpg
-File:BMW M5 E28 in BMW-Museum in Munich, Bayern.JPG
-File:BMW M5 E39 (5805301587).jpg
-File:BMW M5 E39 (7298578524).jpg
-File:BMW M5 E39.jpg
-search: BMW M5 E28 red || M5;E28,1985,1986,1987,1988;red,rot,Zinnoberrot || interior,engine,Innenraum,E34,E39,E60,M535i
-search: BMW M5 E28 blue || M5;E28,1985,1986,1987,1988;blue,blau || interior,engine,Innenraum,E34,E39,E60,M535i
-search: BMW M5 E28 || M5;E28 || interior,engine,Innenraum,E34,E39,E60,rear,Heck
-search: BMW M5 E39 Imola red || M5;E39;red,Imola,rot || interior,engine,Innenraum,E28,E34,E60,rear,Heck
-search: BMW M5 E39 blue || M5;E39;blue,Avus,Le Mans,Laguna,blau || interior,engine,Innenraum,E28,E34,E60,rear,Heck
-search: BMW M5 E39 green || M5;E39;green,grün,Techno,violet,Fern || interior,engine,Innenraum,E28,E34,E60,rear,Heck
-search: BMW M5 G90 green || M5;G90,2024,2025;green,Isle of Man,grün || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
-search: BMW M5 G90 blue || M5;G90,2024,2025;blue,Marina Bay,blau || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
-search: BMW M5 G90 red || M5;G90,2024,2025;red,Fire,rot || interior,engine,Innenraum,Touring,G99,F90,rear,Heck
+dir: p205
+File:1984 Peugeot 205 GT.jpg
+File:2016 Peugeot 208 Allure PureTech - 1200cc 1.2 (100PS) Petrol - Silver - 07-2024, Front.jpg
+File:Peugeot 205 (1990–1998) Wien 26 July 2020 JM (1).jpg
+File:Peugeot 205 GTi Tolman Edition 1.9 Front.jpg
+File:Peugeot 208 Hybrid 145 e-DSC6 GT (II, Facelift) – f 25012026.jpg
+File:Peugeot e-208 Allure (II) – f 26122020.jpg
+search: Peugeot 205 GTI red || 205;GTI,GTi,GT,XS,XR,GR,1983,1984,1985,1986,1987,1988;red,rouge,rot,Vallelunga || interior,engine,Innenraum,T16,rally,Rallye,rear,Heck,206,cabriolet,CTI
+search: Peugeot 205 blue || 205;GTI,GTi,GT,XS,XR,GR,Junior,1983,1984,1985,1986,1987,1988;blue,bleu,blau,Miami || interior,engine,Innenraum,T16,rally,Rallye,rear,Heck,206
+search: Peugeot 205 yellow || 205;yellow,jaune,gelb,green,vert,grün,orange || interior,engine,Innenraum,T16,rally,Rallye,rear,Heck,206
+search: Peugeot 208 2012 red || 208;2012,2013,2014,2015,2016,GTi,Allure,Active;red,rouge,rot || interior,engine,Innenraum,T16,R2,R5,rally,Rallye,rear,Heck,2019,2020,e-208,II
+search: Peugeot 208 2012 blue || 208;2012,2013,2014,2015,2016,GTi,Allure,Active,XY;blue,bleu,blau,Virtuo || interior,engine,Innenraum,T16,R2,R5,rally,Rallye,rear,Heck,2019,2020,e-208,II
+search: Peugeot 208 2012 orange || 208;2012,2013,2014,2015,2016,GTi,Allure,XY;orange,yellow,jaune,green || interior,engine,Innenraum,T16,R2,R5,rally,Rallye,rear,Heck,II
+search: Peugeot 208 II facelift || 208;II,2023,2024,2025,Facelift;blue,bleu,yellow,jaune,Agueda,Vertigo,red,orange,Fusion,green || interior,engine,Innenraum,rally,Rallye,Rally4,rear,Heck
+search: Peugeot e-208 yellow || 208;II,2019,2020,2021,2024,e-208;yellow,jaune,Faro,orange,Fusion || interior,engine,Innenraum,rally,Rallye,Rally4,rear,Heck,charging
+search: Peugeot 208 Vertigo blue || 208;II,2019,2020,2021,2024,2025,e-208;blue,bleu,Vertigo,red,Elixir || interior,engine,Innenraum,rally,Rallye,Rally4,rear,Heck
